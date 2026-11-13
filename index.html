@@ -1,0 +1,1731 @@
+<title>Max Fashion</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --text-primary: #111111;
+  --text-secondary: #8A8A8A;
+  --bg-light: #F6F6F6;
+  --yellow-accent: #FFD200;
+  --whatsapp-green: #25D366;
+  --font-main: 'Montserrat', sans-serif;
+  --letter-spacing: 0.06em;
+  --section-gap-desktop: 80px;
+  --section-gap-mobile: 48px;
+  --container-max: 1400px;
+  --gutter: 16px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-main);
+  background: var(--white);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-bottom: 80px;
+}
+
+@media (min-width: 768px) { body { padding-bottom: 0; } }
+
+a { text-decoration: none; color: inherit; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+img { max-width: 100%; display: block; }
+
+.container { max-width: var(--container-max); margin: 0 auto; padding-inline: var(--gutter); }
+
+.full-width {
+  margin-left: calc(-1 * max(16px, env(safe-area-inset-left, 0px)));
+  margin-right: calc(-1 * max(16px, env(safe-area-inset-right, 0px)));
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+/* COUNTDOWN BAR */
+.countdown-bar {
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+  color: var(--white);
+  padding: 14px 16px;
+  text-align: center;
+}
+
+.countdown-bar .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (min-width: 768px) {
+  .countdown-bar .container { flex-direction: row; justify-content: center; gap: 32px; }
+}
+
+.countdown-text {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.countdown-timer { display: flex; gap: 16px; }
+.countdown-unit { display: flex; flex-direction: column; align-items: center; }
+.countdown-number { font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1; background: linear-gradient(180deg, #FFD700 0%, #FFA500 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.countdown-label { font-size: 9px; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.8; }
+
+/* MARQUEE BAR */
+.marquee-bar {
+  background: var(--black);
+  color: var(--white);
+  padding: 8px 0;
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee 30s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee-item {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+  padding: 0 40px;
+  flex-shrink: 0;
+}
+
+.marquee-item::after { content: '•'; margin-left: 40px; }
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* HEADER */
+.header {
+  background: var(--white);
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 100;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  background: var(--white);
+  z-index: 101;
+}
+
+.header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 16px;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .header-main { padding: 16px; }
+}
+
+.header-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity var(--transition-fast);
+}
+
+.header-icon:hover { opacity: 0.6; }
+.header-icon svg { width: 20px; height: 20px; }
+
+.header-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-logo img { height: 52px; width: auto; }
+
+@media (min-width: 768px) {
+  .header-logo img { height: 48px; }
+}
+
+.header-right { display: flex; align-items: center; gap: 16px; }
+
+.cart-icon { position: relative; }
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: var(--black);
+  color: var(--white);
+  font-size: 9px;
+  font-weight: 600;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navigation */
+.nav {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav::-webkit-scrollbar { display: none; }
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0 16px;
+  gap: 24px;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .nav-list { justify-content: center; gap: 32px; }
+}
+
+.nav-item { flex-shrink: 0; }
+
+.nav-link {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+  padding: 14px 0;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--black);
+  transition: width var(--transition-normal);
+}
+
+.nav-link:hover::after { width: 100%; }
+
+/* BANNER CAROUSEL */
+.banner-carousel { position: relative; overflow: hidden; }
+
+.banner-slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.banner-slide { min-width: 100%; position: relative; }
+.banner-slide img { width: 100%; height: auto; display: block; }
+
+.banner-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255,255,255,0.95);
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.banner-arrow {
+  font-size: 18px;
+  padding: 4px 8px;
+  transition: opacity var(--transition-fast);
+}
+
+.banner-arrow:hover { opacity: 0.6; }
+
+.banner-counter { font-size: 12px; font-weight: 500; font-variant-numeric: tabular-nums; }
+
+/* BENEFITS BAR */
+.benefits-bar {
+  background: var(--bg-light);
+  padding: 16px 0;
+  overflow: hidden;
+}
+
+.benefits-scroll {
+  display: flex;
+  animation: marquee 25s linear infinite;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 40px;
+  flex-shrink: 0;
+}
+
+.benefit-icon { width: 24px; height: 24px; opacity: 0.7; }
+.benefit-text { display: flex; flex-direction: column; }
+.benefit-title { font-size: 11px; font-weight: 600; letter-spacing: var(--letter-spacing); text-transform: uppercase; }
+.benefit-desc { font-size: 10px; color: var(--text-secondary); }
+
+/* SECTIONS */
+.section {
+  padding: var(--section-gap-mobile) 0;
+}
+
+@media (min-width: 768px) {
+  .section { padding: var(--section-gap-desktop) 0; }
+}
+
+.section-header { text-align: center; margin-bottom: 32px; }
+
+@media (min-width: 768px) {
+  .section-header { margin-bottom: 48px; }
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .section-title { font-size: 22px; }
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
+  border-radius: 2px;
+}
+
+/* PRODUCT GRID */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .products-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* PRODUCT CARD */
+.product-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-image-wrapper {
+  position: relative;
+  aspect-ratio: 2/3;
+  overflow: hidden;
+  background: var(--bg-light);
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity var(--transition-normal);
+}
+
+.product-image.hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.product-card:hover .product-image.hover { opacity: 1; }
+.product-card:hover .product-image:not(.hover) { opacity: 0; }
+
+.product-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: linear-gradient(135deg, #FF4500 0%, #DC143C 100%);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 12px;
+  letter-spacing: 0.02em;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(255,69,0,0.3);
+}
+
+.product-badge-new {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--black);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 12px;
+  letter-spacing: 0.02em;
+  border-radius: 2px;
+}
+
+.product-badge-shipping {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, #00C853 0%, #00E676 100%);
+  color: var(--white);
+  font-size: 9px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0,200,83,0.3);
+}
+
+.product-info {
+  padding: 14px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-grow: 1;
+}
+
+.product-name {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .product-name { font-size: 13px; }
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+}
+
+.product-stars { color: var(--black); letter-spacing: 1px; }
+.product-reviews { color: var(--text-secondary); }
+
+.product-prices {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.product-price { font-size: 15px; font-weight: 700; }
+.product-price-old { font-size: 13px; color: var(--text-secondary); text-decoration: line-through; }
+.product-pix { font-size: 12px; color: var(--text-primary); }
+.product-pix strong { font-weight: 600; }
+.product-installments { font-size: 11px; color: var(--text-secondary); }
+
+.product-colors-extra { font-size: 11px; color: var(--text-secondary); margin-left: 4px; }
+
+.product-color-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.product-color-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.product-color-swatch:hover { transform: scale(1.2); }
+
+/* MOBILE OPTIMIZATIONS */
+@media (max-width: 767px) {
+  .product-name { font-size: 11px; line-height: 1.3; }
+  .product-price { font-size: 14px; }
+  .product-price-old { font-size: 11px; }
+  .product-pix { font-size: 11px; }
+  .product-installments { font-size: 10px; }
+  .product-color-swatches { gap: 3px; }
+  .product-color-swatch { width: 16px; height: 16px; }
+  .product-colors-extra { font-size: 10px; }
+  .btn-buy { padding: 12px; font-size: 11px; }
+  .section-title { font-size: 16px; }
+}
+
+.product-variants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.product-variant {
+  font-size: 10px;
+  padding: 4px 8px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  transition: all var(--transition-fast);
+}
+
+.product-variant:hover {
+  border-color: var(--black);
+  background: var(--black);
+  color: var(--white);
+}
+
+.product-button {
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.btn-buy {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #000000 0%, #333333 100%);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn-buy:hover { background: linear-gradient(135deg, #333333 0%, #000000 100%); transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.2); }
+
+/* COLLECTION BANNERS */
+.collection-banners {
+  padding: var(--section-gap-mobile) 0;
+}
+
+@media (min-width: 768px) {
+  .collection-banners { padding: var(--section-gap-desktop) 0; }
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .collection-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.collection-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+}
+
+@media (min-width: 768px) {
+  .collection-item { aspect-ratio: 4/5; }
+}
+
+.collection-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.collection-item:hover img { transform: scale(1.05); }
+
+.collection-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  color: var(--white);
+  text-align: center;
+}
+
+.collection-title {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+}
+
+/* TESTIMONIALS */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .testimonials-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.testimonial-card {
+  background: var(--white);
+  padding: 32px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.testimonial-quote { font-size: 48px; line-height: 1; color: var(--bg-light); margin-bottom: 16px; }
+.testimonial-stars { font-size: 14px; letter-spacing: 2px; margin-bottom: 20px; }
+.testimonial-text { font-size: 14px; font-style: italic; font-weight: 300; line-height: 1.7; margin-bottom: 20px; color: var(--text-primary); }
+.testimonial-author { font-size: 13px; font-weight: 600; letter-spacing: var(--letter-spacing); text-transform: uppercase; }
+
+/* FOOTER */
+.footer {
+  background: var(--black);
+  color: var(--white);
+  padding: 48px 0 24px;
+}
+
+.footer-content {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.footer-logo { text-align: center; margin-bottom: 32px; }
+.footer-logo img { height: 48px; margin: 0 auto; filter: invert(1); }
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 24px;
+  margin-bottom: 32px;
+}
+
+.footer-link {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  transition: opacity var(--transition-fast);
+}
+
+.footer-link:hover { opacity: 1; }
+
+.footer-contact { text-align: center; margin-bottom: 32px; }
+.footer-contact p { font-size: 12px; opacity: 0.8; margin-bottom: 4px; }
+
+.footer-payments {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.payment-icon {
+  background: var(--white);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.footer-security {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.security-badge {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.6;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 8px 12px;
+}
+
+.footer-copyright {
+  text-align: center;
+  font-size: 10px;
+  opacity: 0.5;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* FLOATING ELEMENTS */
+.coupon-tab {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--black);
+  color: var(--white);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  padding: 16px 10px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 90;
+  transition: transform var(--transition-fast);
+}
+
+.coupon-tab:hover { transform: translateY(-50%) translateX(2px); }
+
+.gift-popup {
+  position: fixed;
+  bottom: 80px;
+  left: 16px;
+  background: var(--white);
+  padding: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  border: 1px solid var(--bg-light);
+  z-index: 80;
+  max-width: 280px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+@media (min-width: 768px) { .gift-popup { bottom: 24px; } }
+
+.gift-popup.hidden { display: none; }
+.gift-icon { font-size: 24px; flex-shrink: 0; }
+.gift-content { flex-grow: 1; }
+.gift-text { font-size: 12px; line-height: 1.5; margin-bottom: 8px; }
+.gift-text strong { font-weight: 600; }
+.gift-link { font-size: 11px; font-weight: 500; text-decoration: underline; }
+.gift-close { font-size: 18px; opacity: 0.4; flex-shrink: 0; }
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 80px;
+  right: 16px;
+  width: 56px;
+  height: 56px;
+  background: var(--whatsapp-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  z-index: 80;
+  transition: transform var(--transition-fast);
+}
+
+@media (min-width: 768px) { .whatsapp-btn { bottom: 24px; } }
+.whatsapp-btn:hover { transform: scale(1.05); }
+.whatsapp-btn svg { width: 28px; height: 28px; fill: var(--white); }
+
+.mobile-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  padding: 8px 0;
+  padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+  z-index: 100;
+  display: flex;
+}
+
+@media (min-width: 768px) { .mobile-nav { display: none; } }
+
+.mobile-nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding: 8px 4px;
+}
+
+.mobile-nav-item svg { width: 20px; height: 20px; }
+
+.mobile-nav-center { position: relative; top: -20px; }
+
+.mobile-nav-center-btn {
+  width: 56px;
+  height: 56px;
+  background: var(--black);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.mobile-nav-center-btn svg { width: 24px; height: 24px; fill: var(--white); }
+
+.cookie-notice {
+  position: fixed;
+  bottom: 80px;
+  left: 16px;
+  right: 16px;
+  background: var(--white);
+  padding: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  border: 1px solid var(--bg-light);
+  z-index: 150;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .cookie-notice {
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 600px;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.cookie-notice.hidden { display: none; }
+.cookie-text { font-size: 12px; color: var(--text-secondary); flex-grow: 1; }
+
+.cookie-btn {
+  padding: 10px 24px;
+  background: var(--black);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.view-all-btn {
+  display: block;
+  width: fit-content;
+  margin: 32px auto 0;
+  padding: 14px 40px;
+  background: var(--white);
+  color: var(--black);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+  border: 2px solid var(--black);
+  transition: all var(--transition-fast);
+}
+
+.view-all-btn:hover { background: var(--black); color: var(--white); }
+</style>
+
+<!-- Countdown Bar -->
+<div class="countdown-bar full-width">
+  <div class="container">
+    <span class="countdown-text">PRE-BLACK 60%OFF EM TODA CATEGORIA DE JEANS E VESTIDO</span>
+    <div class="countdown-timer">
+      <div class="countdown-unit">
+        <span class="countdown-number" id="countdown-days">16</span>
+        <span class="countdown-label">Dia(s)</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-number" id="countdown-hours">00</span>
+        <span class="countdown-label">Hora(s)</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-number" id="countdown-mins">00</span>
+        <span class="countdown-label">Min(s)</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-number" id="countdown-secs">00</span>
+        <span class="countdown-label">Seg(s)</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Marquee Bar -->
+<div class="marquee-bar full-width">
+  <div class="marquee-content">
+    <span class="marquee-item">5% DE DESCONTO NA PRIMEIRA COMPRA CUPOM: PRIMEIRACOMPRA</span>
+    <span class="marquee-item">FRETE FIXO SUL E SUDESTE R$15,00</span>
+    <span class="marquee-item">BRINDE NAS COMPRAS ACIMA DE R$299,99</span>
+    <span class="marquee-item">5% DE DESCONTO NA PRIMEIRA COMPRA CUPOM: PRIMEIRACOMPRA</span>
+    <span class="marquee-item">FRETE FIXO SUL E SUDESTE R$15,00</span>
+    <span class="marquee-item">BRINDE NAS COMPRAS ACIMA DE R$299,99</span>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header full-width">
+  <div class="header-main">
+    <button class="header-icon" aria-label="Buscar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+    </button>
+
+    <a href="https://modamax.com.br/" class="header-logo">
+      <img src="logo-maxfashion.png" alt="Max Fashion">
+    </a>
+
+    <div class="header-right">
+      <a href="https://modamax.com.br/conta/" class="header-icon" aria-label="Minha Conta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="8" r="4"/><path d="M4 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2"/>
+        </svg>
+      </a>
+      <a href="https://modamax.com.br/carrinho/" class="header-icon cart-icon" aria-label="Carrinho">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M6 6 5 3H2"/>
+        </svg>
+        <span class="cart-count">0</span>
+      </a>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="https://modamax.com.br/lancamentos/" class="nav-link">Lançamentos</a></li>
+      <li class="nav-item"><a href="https://modamax.com.br/colecao-verao/" class="nav-link">Coleção de Verão</a></li>
+      <li class="nav-item"><a href="https://modamax.com.br/mais-vendidos/" class="nav-link">Mais Vendidos</a></li>
+      <li class="nav-item"><a href="https://modamax.com.br/jeans-favoritos/" class="nav-link">Jeans Favoritos</a></li>
+      <li class="nav-item"><a href="https://modamax.com.br/colecao-outono-inverno/" class="nav-link">Coleção Outono Inverno</a></li>
+      <li class="nav-item"><a href="https://modamax.com.br/alfaiataria-casual/" class="nav-link">Alfaiataria Casual</a></li>
+      <li class="nav-item"><a href="https://modamax.com.br/roupas/" class="nav-link">Roupas</a></li>
+      <li class="nav-item"><a href="https://modamax.com.br/basicos-essenciais/" class="nav-link">Básicos Essenciais</a></li>
+      <li class="nav-item"><a href="https://modamax.com.br/outlet/" class="nav-link">Outlet</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Banner Principal -->
+<div class="banner-carousel full-width" id="banner-carousel">
+  <div class="banner-slides" id="banner-slides">
+    <div class="banner-slide">
+      <a href="https://modamax.com.br/lancamentos/">
+        <img src="banner-maxfashion.png" alt="Black Friday Max Fashion">
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Benefits Bar -->
+<div class="benefits-bar full-width">
+  <div class="benefits-scroll">
+    <div class="benefit-item">
+      <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="1" y="6" width="22" height="12" rx="2"/><path d="M17 10h2M5 10h2"/>
+      </svg>
+      <div class="benefit-text">
+        <span class="benefit-title">Frete Grátis</span>
+        <span class="benefit-desc">Acima de R$200</span>
+      </div>
+    </div>
+    <div class="benefit-item">
+      <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+      </svg>
+      <div class="benefit-text">
+        <span class="benefit-title">5% OFF</span>
+        <span class="benefit-desc">No pagamento por PIX</span>
+      </div>
+    </div>
+    <div class="benefit-item">
+      <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/>
+      </svg>
+      <div class="benefit-text">
+        <span class="benefit-title">Parcelamento</span>
+        <span class="benefit-desc">Em até 6x sem juros</span>
+      </div>
+    </div>
+    <div class="benefit-item">
+      <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M20 12v6a2 2 0 01-2 2H6a2 2 0 01-2-2v-6M12 2v10M8 6l4-4 4 4"/>
+      </svg>
+      <div class="benefit-text">
+        <span class="benefit-title">PRIMEIRACOMPRA</span>
+        <span class="benefit-desc">Para 5%OFF na primeira compra</span>
+      </div>
+    </div>
+    <div class="benefit-item">
+      <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="1" y="6" width="22" height="12" rx="2"/><path d="M17 10h2M5 10h2"/>
+      </svg>
+      <div class="benefit-text">
+        <span class="benefit-title">Frete Grátis</span>
+        <span class="benefit-desc">Acima de R$200</span>
+      </div>
+    </div>
+    <div class="benefit-item">
+      <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+      </svg>
+      <div class="benefit-text">
+        <span class="benefit-title">5% OFF</span>
+        <span class="benefit-desc">No pagamento por PIX</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Novidades Section -->
+<section class="section" id="novidades">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Lançamentos</h2>
+    </div>
+    <div class="products-grid">
+      <!-- Blusa Menegotti - NOVO -->
+      <article class="product-card" data-product-id="blusa-menegotti">
+        <a href="produto-blusa-menegotti.html">
+          <div class="product-image-wrapper">
+            <img class="product-image" id="menegotti-main-img" src="img/blusa-menegotti-off-white.webp" alt="BLUSA ALGODÃO MENEGOTTI MANGA EM RENDA" loading="lazy">
+            <img class="product-image hover" src="img/blusa-menegotti-todas-as-cores.webp" alt="BLUSA ALGODÃO MENEGOTTI MANGA EM RENDA" loading="lazy">
+            <span class="product-badge-new">NOVO</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">BLUSA ALGODÃO MENEGOTTI MANGA EM RENDA</h3>
+            <div class="product-rating"><span class="product-stars" style="color:#FFD700;">★★★★★</span><span class="product-reviews"> 4.9 (127)</span></div>
+            <div class="product-color-swatches">
+              <span class="product-color-swatch" style="background-color: #F3EFE4;" title="Off-White" data-img="img/blusa-menegotti-off-white.webp"></span>
+              <span class="product-color-swatch" style="background-color: #111111;" title="Preta" data-img="img/blusa-menegotti-preta.webp"></span>
+              <span class="product-color-swatch" style="background-color: #9A4E25;" title="Caramelo" data-img="img/blusa-menegotti-caramelo.webp"></span>
+              <span class="product-color-swatch" style="background-color: #B3161E;" title="Vermelha" data-img="img/blusa-menegotti-vermelha.webp"></span>
+              <span class="product-color-swatch" style="background-color: #1F5A36;" title="Verde" data-img="img/blusa-menegotti-verde.webp"></span>
+              <span class="product-color-swatch" style="background-color: #B9B9B9;" title="Cinza Mescla" data-img="img/blusa-menegotti-cinza-mescla.webp"></span>
+              <span class="product-color-swatch" style="background-color: #D9C4A0;" title="Bege" data-img="img/blusa-menegotti-bege.webp"></span>
+              <span class="product-colors-extra">+6</span>
+            </div>
+            <div class="product-prices">
+              <span class="product-price">R$37,00</span>
+            </div>
+            <p class="product-pix"><strong>R$35,15</strong> com Pix</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- Blusa Linho Confort - NOVO -->
+      <article class="product-card" data-product-id="blusa-linho-confort">
+        <a href="produto-blusa-linho-confort.html">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="img/blusa-linho-confort-areia.webp" alt="BLUSA LINHO CONFORT" loading="lazy">
+            <img class="product-image hover" src="img/blusa-linho-confort-caramelo.webp" alt="BLUSA LINHO CONFORT" loading="lazy">
+            <span class="product-badge-new">NOVO</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">BLUSA LINHO CONFORT</h3>
+            <div class="product-rating"><span class="product-stars" style="color:#FFD700;">★★★★★</span><span class="product-reviews"> 4.8 (89)</span></div>
+            <div class="product-color-swatches">
+              <span class="product-color-swatch" style="background-color: #C9A878;" title="Areia" data-img="img/blusa-linho-confort-areia.webp"></span>
+              <span class="product-color-swatch" style="background-color: #A0662F;" title="Caramelo" data-img="img/blusa-linho-confort-caramelo.webp"></span>
+              <span class="product-color-swatch" style="background-color: #E8937A;" title="Salmão" data-img="img/blusa-linho-confort-salmao.webp"></span>
+              <span class="product-color-swatch" style="background-color: #B9CDB6;" title="Verde Menta" data-img="img/blusa-linho-confort-verde-menta.webp"></span>
+              <span class="product-color-swatch" style="background-color: #EFE9DC;" title="Off-White" data-img="img/blusa-linho-confort-off-white.webp"></span>
+              <span class="product-colors-extra">+4</span>
+            </div>
+            <div class="product-prices">
+              <span class="product-price">R$38,90</span>
+            </div>
+            <p class="product-pix"><strong>R$36,96</strong> com Pix</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- T-Shirt Confort - NOVO -->
+      <article class="product-card" data-product-id="tshirt-confort">
+        <a href="produto-tshirt-confort.html">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="img/tshirt-confort-branca.webp" alt="T-SHIRT ALGODÃO/MALHA CONFORT" loading="lazy">
+            <img class="product-image hover" src="img/tshirt-confort-preta.webp" alt="T-SHIRT ALGODÃO/MALHA CONFORT" loading="lazy">
+            <span class="product-badge-new">NOVO</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">T-SHIRT ALGODÃO/MALHA CONFORT</h3>
+            <div class="product-color-swatches">
+              <span class="product-color-swatch" style="background-color: #F7F5F0; border-color: #CCCCCC;" title="Branca" data-img="img/tshirt-confort-branca.webp"></span>
+              <span class="product-color-swatch" style="background-color: #1A1A1A;" title="Preta" data-img="img/tshirt-confort-preta.webp"></span>
+              <span class="product-color-swatch" style="background-color: #A9A9A9;" title="Cinza Mescla" data-img="img/tshirt-confort-cinza-mescla.webp"></span>
+              <span class="product-color-swatch" style="background-color: #DCC8A4;" title="Bege" data-img="img/tshirt-confort-bege.webp"></span>
+              <span class="product-color-swatch" style="background-color: #A9C38F;" title="Verde Pistache" data-img="img/tshirt-confort-verde-pistache.webp"></span>
+              <span class="product-color-swatch" style="background-color: #E8743B;" title="Laranja" data-img="img/tshirt-confort-laranja.webp"></span>
+              <span class="product-color-swatch" style="background-color: #A9CFEA;" title="Azul Bebê" data-img="img/tshirt-confort-azul-bebe.webp"></span>
+              <span class="product-colors-extra">+6</span>
+            </div>
+            <div class="product-prices">
+              <span class="product-price">R$38,90</span>
+            </div>
+            <p class="product-pix"><strong>R$36,96</strong> com Pix</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- Produto 1 -->
+      <article class="product-card">
+        <a href="https://modamax.com.br/produtos/calca-sofia-upsmy/" target="_blank">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/whatsapp-image-2026-11-09-at-13-53-53-1fa8505410f362ba4917942434645348-1024-1024.webp" alt="CALÇA SOFIA" loading="lazy">
+            <span class="product-badge">15% OFF</span>
+            <span class="product-badge-shipping">Frete grátis</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">CALÇA SOFIA</h3>
+            <div class="product-rating"><span class="product-stars">★★★★★</span><span class="product-reviews">(0)</span></div>
+            <div class="product-prices">
+              <span class="product-price">R$110,49</span>
+              <span class="product-price-old">R$129,99</span>
+            </div>
+            <p class="product-pix"><strong>R$104,97</strong> com Pix</p>
+            <p class="product-installments">2x de R$55,25 sem juros</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- Produto 2 -->
+      <article class="product-card">
+        <a href="https://modamax.com.br/produtos/conjunto-sofia/" target="_blank">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_3192-072850ba557875dc0217941561752892-1024-1024.webp" alt="CONJUNTO SOFIA" loading="lazy">
+            <img class="product-image hover" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_3193-7533a6bb354e5ac8de17941561750563-1024-1024.webp" alt="CONJUNTO SOFIA" loading="lazy">
+            <span class="product-badge">15% OFF</span>
+            <span class="product-badge-shipping">Frete grátis</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">CONJUNTO SOFIA</h3>
+            <div class="product-rating"><span class="product-stars">★★★★★</span><span class="product-reviews">(0)</span></div>
+            <div class="product-prices">
+              <span class="product-price">R$212,49</span>
+              <span class="product-price-old">R$249,99</span>
+            </div>
+            <p class="product-pix"><strong>R$201,87</strong> com Pix</p>
+            <p class="product-installments">5x de R$42,50 sem juros</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- Produto 3 -->
+      <article class="product-card">
+        <a href="https://modamax.com.br/produtos/vestido-serena-y5dzt/" target="_blank">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_6139-33f2ce1b5f0accac7117891579958969-1024-1024.webp" alt="VESTIDO SERENA" loading="lazy">
+            <img class="product-image hover" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_6140-59d30c1016dc377bb917891579958909-1024-1024.webp" alt="VESTIDO SERENA" loading="lazy">
+            <span class="product-badge">15% OFF</span>
+            <span class="product-badge-shipping">Frete grátis</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">VESTIDO SERENA</h3>
+            <div class="product-rating"><span class="product-stars">★★★★★</span><span class="product-reviews">(8)</span></div>
+            <div class="product-prices">
+              <span class="product-price">R$144,49</span>
+              <span class="product-price-old">R$169,99</span>
+            </div>
+            <p class="product-pix"><strong>R$137,27</strong> com Pix</p>
+            <p class="product-installments">3x de R$48,16 sem juros</p>
+            <div class="product-variants">
+              <span class="product-variant">Verde</span>
+              <span class="product-variant">Rose</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Produto 4 -->
+      <article class="product-card">
+        <a href="https://modamax.com.br/produtos/conjunto-amanda-1nzbq/" target="_blank">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_1547-0c2d3ca355556447ef17915613762499-1024-1024.webp" alt="CONJUNTO AMANDA" loading="lazy">
+            <img class="product-image hover" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_1546-89ea4ed0a22f2647ef17915613755956-1024-1024.webp" alt="CONJUNTO AMANDA" loading="lazy">
+            <span class="product-badge">15% OFF</span>
+            <span class="product-badge-shipping">Frete grátis</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">CONJUNTO AMANDA</h3>
+            <div class="product-rating"><span class="product-stars">★★★★★</span><span class="product-reviews">(14)</span></div>
+            <div class="product-prices">
+              <span class="product-price">R$212,49</span>
+              <span class="product-price-old">R$249,99</span>
+            </div>
+            <p class="product-pix"><strong>R$201,87</strong> com Pix</p>
+            <p class="product-installments">5x de R$42,50 sem juros</p>
+            <div class="product-variants">
+              <span class="product-variant">Amarelo</span>
+              <span class="product-variant">Azul</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Produto 5 -->
+      <article class="product-card">
+        <a href="https://modamax.com.br/produtos/vestido-chris/" target="_blank">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_2343-837c122005fcc22c0317849366800526-1024-1024.webp" alt="VESTIDO CHRIS" loading="lazy">
+            <img class="product-image hover" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_4693-7fc0ba0ca62c2d187d17878639090156-1024-1024.webp" alt="VESTIDO CHRIS" loading="lazy">
+            <span class="product-badge">15% OFF</span>
+            <span class="product-badge-shipping">Frete grátis</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">VESTIDO CHRIS</h3>
+            <div class="product-rating"><span class="product-stars">★★★★★</span><span class="product-reviews">(24)</span></div>
+            <div class="product-prices">
+              <span class="product-price">R$101,99</span>
+              <span class="product-price-old">R$119,99</span>
+            </div>
+            <p class="product-pix"><strong>R$96,89</strong> com Pix</p>
+            <p class="product-installments">2x de R$51,00 sem juros</p>
+            <div class="product-variants">
+              <span class="product-variant">Marrom</span>
+              <span class="product-variant">Preto</span>
+              <span class="product-variant">Verde</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Produto 6 -->
+      <article class="product-card">
+        <a href="https://modamax.com.br/produtos/vestido-manoela-dud00/" target="_blank">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_3027-87fde5ce62d1472e7517861148604920-1024-1024.webp" alt="VESTIDO MANOELA" loading="lazy">
+            <img class="product-image hover" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_3028-8c4e72a4d86e20db3717861148601789-1024-1024.webp" alt="VESTIDO MANOELA" loading="lazy">
+            <span class="product-badge">15% OFF</span>
+            <span class="product-badge-shipping">Frete grátis</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">VESTIDO MANOELA</h3>
+            <div class="product-rating"><span class="product-stars">★★★★★</span><span class="product-reviews">(25)</span></div>
+            <div class="product-prices">
+              <span class="product-price">R$135,99</span>
+              <span class="product-price-old">R$159,99</span>
+            </div>
+            <p class="product-pix"><strong>R$129,19</strong> com Pix</p>
+            <p class="product-installments">3x de R$45,33 sem juros</p>
+            <div class="product-variants">
+              <span class="product-variant">Azul</span>
+              <span class="product-variant">Preto</span>
+              <span class="product-variant">Verde</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Produto 7 -->
+      <article class="product-card">
+        <a href="https://modamax.com.br/produtos/vestido-emilly-wta2k/" target="_blank">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/whatsapp-image-2026-08-24-at-14-18-08-69013041f35b94ff4617875919221274-1024-1024.webp" alt="VESTIDO EMILLY" loading="lazy">
+            <img class="product-image hover" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_4148-3a3321860b4771d10b17875915958219-1024-1024.webp" alt="VESTIDO EMILLY" loading="lazy">
+            <span class="product-badge">15% OFF</span>
+            <span class="product-badge-shipping">Frete grátis</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">VESTIDO EMILLY</h3>
+            <div class="product-rating"><span class="product-stars">★★★★★</span><span class="product-reviews">(10)</span></div>
+            <div class="product-prices">
+              <span class="product-price">R$229,49</span>
+              <span class="product-price-old">R$269,99</span>
+            </div>
+            <p class="product-pix"><strong>R$218,02</strong> com Pix</p>
+            <p class="product-installments">5x de R$45,90 sem juros</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- Produto 8 -->
+      <article class="product-card">
+        <a href="https://modamax.com.br/produtos/vestido-estela-1pqha/" target="_blank">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_4008-f30ec74019521641cf17870772120570-1024-1024.webp" alt="VESTIDO ESTELA" loading="lazy">
+            <img class="product-image hover" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_4006-b6f70de3ed44e28be817870772111558-1024-1024.webp" alt="VESTIDO ESTELA" loading="lazy">
+            <span class="product-badge">15% OFF</span>
+            <span class="product-badge-shipping">Frete grátis</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">VESTIDO ESTELA</h3>
+            <div class="product-rating"><span class="product-stars">★★★★★</span><span class="product-reviews">(21)</span></div>
+            <div class="product-prices">
+              <span class="product-price">R$169,99</span>
+              <span class="product-price-old">R$199,99</span>
+            </div>
+            <p class="product-pix"><strong>R$161,49</strong> com Pix</p>
+            <p class="product-installments">4x de R$42,50 sem juros</p>
+            <div class="product-variants">
+              <span class="product-variant">Azul</span>
+              <span class="product-variant">Verde</span>
+              <span class="product-variant">Preto</span>
+            </div>
+          </div>
+        </a>
+      </article>
+    </div>
+    <a href="https://modamax.com.br/lancamentos/" class="view-all-btn">Ver Todos os Lançamentos</a>
+  </div>
+</section>
+
+<!-- Collection Banners -->
+<section class="collection-banners">
+  <div class="container">
+    <div class="collection-grid">
+      <a href="https://modamax.com.br/roupas/macacao/" class="collection-item">
+        <img src="https://acdn-us.mitiendanube.com/stores/007/190/373/themes/morelia/1-slide-1786833412723-8839164390-b6883a0db6dc732866bf6ee87c6f1f0c1786833413-1024-1024.jpg" alt="Macacão e Macaquinho" loading="lazy">
+        <div class="collection-overlay">
+          <span class="collection-title">Macacão / Macaquinho</span>
+        </div>
+      </a>
+      <a href="https://modamax.com.br/roupas/vestidos/" class="collection-item">
+        <img src="https://acdn-us.mitiendanube.com/stores/007/190/373/themes/morelia/1-slide-1786833412723-5273292073-f860bb9a0898a2ef27efc0a3c9360a661786833414-1024-1024.jpg" alt="Vestidos" loading="lazy">
+        <div class="collection-overlay">
+          <span class="collection-title">Vestidos</span>
+        </div>
+      </a>
+      <a href="https://modamax.com.br/jeans-favoritos/" class="collection-item">
+        <img src="https://acdn-us.mitiendanube.com/stores/007/190/373/themes/morelia/1-slide-1786833412723-8552592864-d15a92127021e54977c0e66d2ac31bb51786833414-1024-1024.jpg" alt="Jeans Favoritos" loading="lazy">
+        <div class="collection-overlay">
+          <span class="collection-title">Jeans Favoritos</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Mais Vendidos Section -->
+<section class="section" id="mais-vendidos">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Mais Vendidos</h2>
+    </div>
+    <div class="products-grid">
+      <!-- Produto 1 -->
+      <article class="product-card">
+        <a href="https://modamax.com.br/produtos/vestido-clarice-ikabq/" target="_blank">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_1532-f3e89877c2466f90f317915611148865-1024-1024.webp" alt="VESTIDO CLARICE" loading="lazy">
+            <img class="product-image hover" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_1533-46170840d20fb1a3c617915611146688-1024-1024.webp" alt="VESTIDO CLARICE" loading="lazy">
+            <span class="product-badge">15% OFF</span>
+            <span class="product-badge-shipping">Frete grátis</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">VESTIDO CLARICE</h3>
+            <div class="product-rating"><span class="product-stars">★★★★★</span><span class="product-reviews">(7)</span></div>
+            <div class="product-prices">
+              <span class="product-price">R$212,49</span>
+              <span class="product-price-old">R$249,99</span>
+            </div>
+            <p class="product-pix"><strong>R$201,87</strong> com Pix</p>
+            <p class="product-installments">5x de R$42,50 sem juros</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- Produto 2 -->
+      <article class="product-card">
+        <a href="https://modamax.com.br/produtos/calca-manuela-ygs6e/" target="_blank">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_1578-0e6ac858b7672f5fa917840670513173-1024-1024.webp" alt="CALÇA MANUELA" loading="lazy">
+            <img class="product-image hover" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_1577-e51a7754f4fffcee6e17840670520662-1024-1024.webp" alt="CALÇA MANUELA" loading="lazy">
+            <span class="product-badge">15% OFF</span>
+            <span class="product-badge-shipping">Frete grátis</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">CALÇA MANUELA</h3>
+            <div class="product-rating"><span class="product-stars">★★★★★</span><span class="product-reviews">(17)</span></div>
+            <div class="product-prices">
+              <span class="product-price">R$84,99</span>
+              <span class="product-price-old">R$99,99</span>
+            </div>
+            <p class="product-pix"><strong>R$80,74</strong> com Pix</p>
+            <p class="product-installments">2x de R$42,50 sem juros</p>
+            <div class="product-variants">
+              <span class="product-variant">36</span>
+              <span class="product-variant">38</span>
+              <span class="product-variant">40</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Produto 3 -->
+      <article class="product-card">
+        <a href="https://modamax.com.br/produtos/conjunto-maite-10zvi/" target="_blank">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_5708-905ab70415ea602e9f17887877399777-1024-1024.webp" alt="CONJUNTO MAITE" loading="lazy">
+            <img class="product-image hover" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_5707-01bbe73963e08da7bf17887877403760-1024-1024.webp" alt="CONJUNTO MAITE" loading="lazy">
+            <span class="product-badge">15% OFF</span>
+            <span class="product-badge-shipping">Frete grátis</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">CONJUNTO MAITE</h3>
+            <div class="product-rating"><span class="product-stars">★★★★★</span><span class="product-reviews">(7)</span></div>
+            <div class="product-prices">
+              <span class="product-price">R$229,49</span>
+              <span class="product-price-old">R$269,99</span>
+            </div>
+            <p class="product-pix"><strong>R$218,02</strong> com Pix</p>
+            <p class="product-installments">5x de R$45,90 sem juros</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- Produto 4 -->
+      <article class="product-card">
+        <a href="https://modamax.com.br/produtos/vestido-beatriz-70ma4/" target="_blank">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_5698-24053d3f35cd32005417887874210285-1024-1024.webp" alt="VESTIDO BEATRIZ" loading="lazy">
+            <img class="product-image hover" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_5697-2e016942e5228dde2c17887874208581-1024-1024.webp" alt="VESTIDO BEATRIZ" loading="lazy">
+            <span class="product-badge">15% OFF</span>
+            <span class="product-badge-shipping">Frete grátis</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">VESTIDO BEATRIZ</h3>
+            <div class="product-rating"><span class="product-stars">★★★★★</span><span class="product-reviews">(15)</span></div>
+            <div class="product-prices">
+              <span class="product-price">R$135,99</span>
+              <span class="product-price-old">R$159,99</span>
+            </div>
+            <p class="product-pix"><strong>R$129,19</strong> com Pix</p>
+            <p class="product-installments">3x de R$45,33 sem juros</p>
+            <div class="product-variants">
+              <span class="product-variant">Off</span>
+              <span class="product-variant">Azul</span>
+              <span class="product-variant">Preto</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Produto 5 -->
+      <article class="product-card">
+        <a href="https://modamax.com.br/produtos/vestido-aylla-1qhhp/" target="_blank">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_4096-6c925f28b9f903354417870833847082-1024-1024.webp" alt="VESTIDO AYLLA" loading="lazy">
+            <img class="product-image hover" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_4097-c49b81cdca51eb46ec17870833847242-1024-1024.webp" alt="VESTIDO AYLLA" loading="lazy">
+            <span class="product-badge">15% OFF</span>
+            <span class="product-badge-shipping">Frete grátis</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">VESTIDO AYLLA</h3>
+            <div class="product-rating"><span class="product-stars">★★★★★</span><span class="product-reviews">(13)</span></div>
+            <div class="product-prices">
+              <span class="product-price">R$127,49</span>
+              <span class="product-price-old">R$149,99</span>
+            </div>
+            <p class="product-pix"><strong>R$121,12</strong> com Pix</p>
+            <p class="product-installments">3x de R$42,50 sem juros</p>
+            <div class="product-variants">
+              <span class="product-variant">Azul</span>
+              <span class="product-variant">Preto</span>
+              <span class="product-variant">Marrom</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Produto 6 -->
+      <article class="product-card">
+        <a href="https://modamax.com.br/produtos/calca-yara/" target="_blank">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_1773-de41e4c3055c0af54717843065260591-1024-1024.webp" alt="CALÇA YARA" loading="lazy">
+            <img class="product-image hover" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_1772-e54e53765715b49f0017843065263164-1024-1024.webp" alt="CALÇA YARA" loading="lazy">
+            <span class="product-badge">15% OFF</span>
+            <span class="product-badge-shipping">Frete grátis</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">CALÇA YARA</h3>
+            <div class="product-rating"><span class="product-stars">★★★★★</span><span class="product-reviews">(0)</span></div>
+            <div class="product-prices">
+              <span class="product-price">R$84,99</span>
+              <span class="product-price-old">R$99,99</span>
+            </div>
+            <p class="product-pix"><strong>R$80,74</strong> com Pix</p>
+            <p class="product-installments">2x de R$42,50 sem juros</p>
+            <div class="product-variants">
+              <span class="product-variant">36</span>
+              <span class="product-variant">38</span>
+              <span class="product-variant">40</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Produto 7 -->
+      <article class="product-card">
+        <a href="https://modamax.com.br/produtos/vestido-maya-1pe9e/" target="_blank">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_6452-8253c9e54773a4b03417895845750517-1024-1024.webp" alt="VESTIDO MAYA" loading="lazy">
+            <img class="product-image hover" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_6450-72ff7f61681cc2c23617895845750453-1024-1024.webp" alt="VESTIDO MAYA" loading="lazy">
+            <span class="product-badge">15% OFF</span>
+            <span class="product-badge-shipping">Frete grátis</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">VESTIDO MAYA</h3>
+            <div class="product-rating"><span class="product-stars">★★★★★</span><span class="product-reviews">(10)</span></div>
+            <div class="product-prices">
+              <span class="product-price">R$229,49</span>
+              <span class="product-price-old">R$269,99</span>
+            </div>
+            <p class="product-pix"><strong>R$218,02</strong> com Pix</p>
+            <p class="product-installments">5x de R$45,90 sem juros</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- Produto 8 -->
+      <article class="product-card">
+        <a href="https://modamax.com.br/produtos/blusa-bianca-1phf6/" target="_blank">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_3983-42cfe3a32980e6923817870758805118-1024-1024.webp" alt="BLUSA BIANCA" loading="lazy">
+            <img class="product-image hover" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_3984-10dc54885aece0e62e17870758804884-1024-1024.webp" alt="BLUSA BIANCA" loading="lazy">
+            <span class="product-badge-shipping">Frete grátis</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">BLUSA BIANCA</h3>
+            <div class="product-rating"><span class="product-stars">★★★★★</span><span class="product-reviews">(16)</span></div>
+            <div class="product-prices">
+              <span class="product-price">R$79,99</span>
+            </div>
+            <p class="product-pix"><strong>R$75,99</strong> com Pix</p>
+            <div class="product-variants">
+              <span class="product-variant">Azul</span>
+              <span class="product-variant">Marrom</span>
+              <span class="product-variant">Preto</span>
+            </div>
+          </div>
+        </a>
+      </article>
+    </div>
+    <a href="https://modamax.com.br/mais-vendidos/" class="view-all-btn">Ver Todos os Mais Vendidos</a>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="section" id="depoimentos">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">O que dizem sobre nós...</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"</div>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">O pedido chegou perfeito, cheiroso e rápido. Meu macaquinho foi super elogiado.</p>
+        <p class="testimonial-author">— Daniela Torres</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"</div>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">Perfeitos! Sou apaixonada por todos os meus vestidos da Max Fashion e sou cliente fiel há anos. Super confio e indico.</p>
+        <p class="testimonial-author">— Amanda Pires</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"</div>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">Virei fã da marca. Consigo looks para todos os momentos, seja mais formal ou casual.</p>
+        <p class="testimonial-author">— Mariana Rancanti</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer full-width">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="logo-maxfashion.png" alt="Max Fashion">
+    </div>
+
+    <div class="footer-links">
+      <a href="https://modamax.com.br/quem-somos/" class="footer-link">Quem Somos</a>
+      <a href="https://modamax.com.br/rastreio/" class="footer-link">Rastreio</a>
+      <a href="https://modamax.com.br/brinde/" class="footer-link">Brinde</a>
+      <a href="https://modamax.com.br/trocas-e-devolucoes/" class="footer-link">Trocas e devoluções</a>
+      <a href="https://modamax.com.br/politica-de-privacidade/" class="footer-link">Privacidade</a>
+      <a href="https://modamax.com.br/seguranca/" class="footer-link">Segurança</a>
+      <a href="https://modamax.com.br/prazo-de-postagem/" class="footer-link">Prazo de postagem</a>
+      <a href="https://modamax.com.br/pagamento/" class="footer-link">Pagamento</a>
+    </div>
+
+    <div class="footer-contact">
+      <p>12988487255 · modamax@sac.com.br</p>
+      <p>Rua Andorra 500, Loja 241 - Shopping Oriente - São José dos Campos</p>
+    </div>
+
+    <div class="footer-payments">
+      <span class="payment-icon">Visa</span>
+      <span class="payment-icon">Mastercard</span>
+      <span class="payment-icon">Amex</span>
+      <span class="payment-icon">Elo</span>
+      <span class="payment-icon">Hipercard</span>
+      <span class="payment-icon">Diners</span>
+      <span class="payment-icon">Boleto</span>
+      <span class="payment-icon">Pix</span>
+    </div>
+
+    <div class="footer-security">
+      <span class="security-badge">Site Seguro SSL</span>
+      <span class="security-badge">Google Safe Browsing</span>
+      <span class="security-badge">Verificada por Reclame AQUI</span>
+    </div>
+
+    <div class="footer-copyright">
+      Copyright Max Fashion - 16994984000103 - 2026. Todos os direitos reservados.
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Elements -->
+<button class="coupon-tab" id="coupon-tab">5% NA PRIMEIRA COMPRA</button>
+
+<div class="gift-popup" id="gift-popup">
+  <span class="gift-icon">🎁</span>
+  <div class="gift-content">
+    <p class="gift-text">Nas compras acima de <strong>R$ 299,99</strong>, GANHE um <strong>BRINDE ESPECIAL!</strong></p>
+    <a href="https://modamax.com.br/brinde/" class="gift-link">Ver todos os brindes</a>
+  </div>
+  <button class="gift-close" id="gift-close">×</button>
+</div>
+
+<a href="https://wa.me/5512988487255" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<nav class="mobile-nav">
+  <a href="https://modamax.com.br/" class="mobile-nav-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M20 12v6a2 2 0 01-2 2H6a2 2 0 01-2-2v-6M12 2v10M8 6l4-4 4 4"/>
+    </svg>
+    1ª Compra
+  </a>
+  <a href="https://wa.me/5512988487255" class="mobile-nav-item" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+    </svg>
+    WhatsApp
+  </a>
+  <div class="mobile-nav-center">
+    <a href="https://modamax.com.br/" class="mobile-nav-center-btn" aria-label="Loja">
+      <svg viewBox="0 0 24 24"><path d="M12 2C9.243 2 7 4.243 7 7v3H6a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2v-8a2 2 0 00-2-2h-1V7c0-2.757-2.243-5-5-5zm0 2c1.654 0 3 1.346 3 3v3H9V7c0-1.654 1.346-3 3-3z"/></svg>
+    </a>
+  </div>
+  <a href="https://modamax.com.br/rastreio/" class="mobile-nav-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+    </svg>
+    Rastreio
+  </a>
+  <a href="https://modamax.com.br/brinde/" class="mobile-nav-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M20 12v6a2 2 0 01-2 2H6a2 2 0 01-2-2v-6"/><rect x="6" y="5" width="12" height="7"/><path d="M12 12v-2M8 8h8"/>
+    </svg>
+    Brinde
+  </a>
+</nav>
+
+<div class="cookie-notice" id="cookie-notice">
+  <p class="cookie-text">Ao navegar por este site você aceita o uso de cookies para agilizar a sua experiência de compra.</p>
+  <button class="cookie-btn" id="cookie-accept">Entendi</button>
+</div>
+
+<script>
+// COUNTDOWN TIMER
+function updateCountdown() {
+  const target = new Date('2026-11-27T00:00:00').getTime();
+  const now = new Date().getTime();
+  const diff = target - now;
+
+  if (diff <= 0) return;
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+  document.getElementById('countdown-days').textContent = String(days).padStart(2, '0');
+  document.getElementById('countdown-hours').textContent = String(hours).padStart(2, '0');
+  document.getElementById('countdown-mins').textContent = String(mins).padStart(2, '0');
+  document.getElementById('countdown-secs').textContent = String(secs).padStart(2, '0');
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+
+// GIFT POPUP CLOSE
+document.getElementById('gift-close').addEventListener('click', function() {
+  document.getElementById('gift-popup').classList.add('hidden');
+});
+
+// COOKIE NOTICE
+var cookieNotice = document.getElementById('cookie-notice');
+try { if (localStorage.getItem('cookies_accepted')) cookieNotice.classList.add('hidden'); } catch (e) {}
+
+document.getElementById('cookie-accept').addEventListener('click', function() {
+  cookieNotice.classList.add('hidden');
+  try { localStorage.setItem('cookies_accepted', 'true'); } catch (e) {}
+});
+
+// COLOR SWATCHES HOVER
+document.querySelectorAll('.product-color-swatch').forEach(function(swatch) {
+  swatch.addEventListener('mouseenter', function() {
+    var imgSrc = this.getAttribute('data-img');
+    if (imgSrc) {
+      var card = this.closest('.product-card');
+      var mainImg = card.querySelector('.product-image:not(.hover)');
+      if (mainImg) mainImg.src = imgSrc;
+    }
+  });
+});
+</script>

@@ -1,0 +1,2532 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BLUSA ALGODÃO MENEGOTTI MANGA EM RENDA - Max Fashion</title>
+<meta name="description" content="Blusa Algodão Menegotti com mangas em renda bordada. Conforto e elegância do P ao G4. 7 cores disponíveis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --text-primary: #111111;
+  --text-secondary: #8A8A8A;
+  --bg-light: #F6F6F6;
+  --yellow-accent: #FFD200;
+  --whatsapp-green: #25D366;
+  --pink-accent: #B5175A;
+  --font-main: 'Montserrat', sans-serif;
+  --letter-spacing: 0.06em;
+  --container-max: 1400px;
+  --gutter: 16px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-main);
+  background: var(--white);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-bottom: 80px;
+}
+
+@media (min-width: 768px) { body { padding-bottom: 0; } }
+
+a { text-decoration: none; color: inherit; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+img { max-width: 100%; display: block; }
+
+.container { max-width: var(--container-max); margin: 0 auto; padding-inline: var(--gutter); }
+
+.full-width {
+  margin-left: calc(-1 * max(16px, env(safe-area-inset-left, 0px)));
+  margin-right: calc(-1 * max(16px, env(safe-area-inset-right, 0px)));
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+/* COUNTDOWN BAR */
+.countdown-bar {
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+  color: var(--white);
+  padding: 14px 16px;
+  text-align: center;
+}
+
+.countdown-bar .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (min-width: 768px) {
+  .countdown-bar .container { flex-direction: row; justify-content: center; gap: 32px; }
+}
+
+.countdown-text {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.countdown-timer { display: flex; gap: 16px; }
+.countdown-unit { display: flex; flex-direction: column; align-items: center; }
+.countdown-number { font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1; background: linear-gradient(180deg, #FFD700 0%, #FFA500 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.countdown-label { font-size: 9px; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.8; }
+
+/* MARQUEE BAR */
+.marquee-bar {
+  background: var(--black);
+  color: var(--white);
+  padding: 8px 0;
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee 30s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee-item {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+  padding: 0 40px;
+  flex-shrink: 0;
+}
+
+.marquee-item::after { content: '•'; margin-left: 40px; }
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* HEADER */
+.header {
+  background: var(--white);
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 100;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  background: var(--white);
+  z-index: 101;
+}
+
+.header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 16px;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .header-main { padding: 16px; }
+}
+
+.header-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity var(--transition-fast);
+}
+
+.header-icon:hover { opacity: 0.6; }
+.header-icon svg { width: 20px; height: 20px; }
+
+.header-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-logo img { height: 52px; width: auto; }
+
+@media (min-width: 768px) {
+  .header-logo img { height: 48px; }
+}
+
+.header-right { display: flex; align-items: center; gap: 16px; }
+
+.cart-icon { position: relative; }
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: var(--black);
+  color: var(--white);
+  font-size: 9px;
+  font-weight: 600;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navigation */
+.nav {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav::-webkit-scrollbar { display: none; }
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0 16px;
+  gap: 24px;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .nav-list { justify-content: center; gap: 32px; }
+}
+
+.nav-item { flex-shrink: 0; }
+
+.nav-link {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+  padding: 14px 0;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--black);
+  transition: width var(--transition-normal);
+}
+
+.nav-link:hover::after { width: 100%; }
+
+/* BREADCRUMB */
+.breadcrumb {
+  padding: 16px 0;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.breadcrumb a { transition: color var(--transition-fast); }
+.breadcrumb a:hover { color: var(--text-primary); }
+.breadcrumb span { margin: 0 8px; }
+
+/* PRODUCT LAYOUT */
+.product-page {
+  padding: 24px 0 48px;
+}
+
+.product-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 1024px) {
+  .product-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+}
+
+/* GALLERY */
+.gallery {
+  position: relative;
+}
+
+.gallery-main {
+  position: relative;
+  aspect-ratio: 2/3;
+  overflow: hidden;
+  background: var(--bg-light);
+  cursor: zoom-in;
+}
+
+.gallery-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-main:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-thumbs {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 16px;
+  }
+
+  .gallery-thumbs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    order: -1;
+    max-height: calc((100vw - 48px) * 0.75);
+    overflow-y: auto;
+  }
+
+  .gallery-thumb {
+    width: 80px;
+    height: 120px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border-color var(--transition-fast);
+    flex-shrink: 0;
+  }
+
+  .gallery-thumb.active,
+  .gallery-thumb:hover {
+    border-color: var(--black);
+  }
+
+  .gallery-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Mobile Carousel */
+.gallery-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.gallery-carousel::-webkit-scrollbar { display: none; }
+
+.gallery-slide {
+  min-width: 100%;
+  scroll-snap-align: start;
+}
+
+.gallery-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 0;
+}
+
+@media (min-width: 1024px) {
+  .gallery-carousel { display: none; }
+  .gallery-dots { display: none; }
+  .gallery-main { display: block; }
+}
+
+@media (max-width: 1023px) {
+  .gallery-main { display: none; }
+}
+
+.gallery-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.gallery-dot.active { background: var(--black); }
+
+/* PRODUCT INFO */
+.product-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-title {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .product-title { font-size: 22px; }
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-stars {
+  color: #FFD700;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.product-rating-number {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.product-rating-count {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.product-price-main {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.product-pix-main {
+  font-size: 16px;
+  color: var(--text-primary);
+  margin-top: 4px;
+}
+
+.product-pix-main strong { font-weight: 600; }
+
+/* COLOR SELECTOR */
+.selector-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.selector-label {
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
+}
+
+.selector-label span { font-weight: 400; }
+
+.color-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.color-swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  position: relative;
+  transition: transform var(--transition-fast);
+}
+
+.color-swatch::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: border-color var(--transition-fast);
+}
+
+.color-swatch.active::before,
+.color-swatch:hover::before {
+  border-color: var(--black);
+}
+
+.color-swatch[title]::after {
+  content: attr(title);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--black);
+  color: var(--white);
+  padding: 4px 8px;
+  font-size: 10px;
+  white-space: nowrap;
+  border-radius: 2px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-fast);
+}
+
+.color-swatch:hover::after { opacity: 1; }
+
+/* SIZE SELECTOR */
+.size-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.size-btn {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #ddd;
+  background: var(--white);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.size-btn:hover {
+  border-color: var(--black);
+}
+
+.size-btn.active {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+
+.size-table-link {
+  font-size: 12px;
+  text-decoration: underline;
+  color: var(--text-secondary);
+  cursor: pointer;
+  margin-left: 16px;
+  transition: color var(--transition-fast);
+}
+
+.size-table-link:hover { color: var(--text-primary); }
+
+.size-error {
+  font-size: 12px;
+  color: #dc3545;
+  margin-top: 8px;
+  display: none;
+}
+
+.size-error.show { display: block; }
+
+/* QUANTITY */
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+}
+
+.quantity-btn {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-fast);
+}
+
+.quantity-btn:hover { background: var(--bg-light); }
+
+.quantity-value {
+  width: 48px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  height: 40px;
+}
+
+/* BUTTONS */
+.btn-primary {
+  width: 100%;
+  padding: 16px;
+  background: var(--black);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+  border: none;
+  transition: all var(--transition-fast);
+}
+
+.btn-primary:hover { background: #333; }
+
+.btn-secondary {
+  width: 100%;
+  padding: 16px;
+  background: var(--white);
+  color: var(--black);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+  border: 2px solid var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all var(--transition-fast);
+}
+
+.btn-secondary:hover { background: var(--bg-light); }
+
+.buttons-desktop {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .buttons-desktop { display: flex; }
+}
+
+.btn-secondary svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--black);
+}
+
+/* BENEFITS BOX */
+.benefits-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;
+  background: var(--bg-light);
+  font-size: 11px;
+}
+
+.benefit-item-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.benefit-item-box svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* DESCRIPTION */
+.description-section {
+  padding: 48px 0;
+  border-top: 1px solid #eee;
+}
+
+.description-title {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.description-content {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.description-content p { margin-bottom: 16px; }
+.description-content h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 24px 0 12px;
+}
+
+.description-content ul {
+  list-style: none;
+  margin-bottom: 16px;
+}
+
+.description-content ul li {
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.description-content ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+}
+
+.table-image {
+  max-width: 640px;
+  margin: 24px auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* MEASUREMENTS TABLE */
+.measurements-table {
+  width: 100%;
+  max-width: 640px;
+  margin: 24px auto;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.measurements-table th {
+  background: var(--pink-accent);
+  color: var(--white);
+  padding: 12px 8px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.measurements-table td {
+  padding: 10px 8px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.measurements-table tr:nth-child(even) td {
+  background: rgba(181, 23, 90, 0.05);
+}
+
+/* REVIEWS SECTION */
+.reviews-section {
+  padding: 48px 0;
+  border-top: 1px solid #eee;
+  background: var(--bg-light);
+}
+
+.reviews-header {
+  margin-bottom: 32px;
+}
+
+.reviews-title {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.reviews-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  background: var(--white);
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  .reviews-summary {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.reviews-score {
+  text-align: center;
+  padding-right: 32px;
+}
+
+@media (min-width: 768px) {
+  .reviews-score {
+    border-right: 1px solid #eee;
+  }
+}
+
+.score-number {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.score-stars {
+  font-size: 20px;
+  color: #FFD700;
+  letter-spacing: 2px;
+  margin: 8px 0;
+}
+
+.score-total {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.reviews-bars {
+  flex: 1;
+  padding-left: 0;
+}
+
+@media (min-width: 768px) {
+  .reviews-bars { padding-left: 32px; }
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.bar-row span:first-child {
+  width: 30px;
+  color: var(--text-secondary);
+}
+
+.bar-row span:last-child {
+  width: 30px;
+  text-align: right;
+  color: var(--text-secondary);
+}
+
+.bar {
+  flex: 1;
+  height: 8px;
+  background: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: #FFD700;
+  border-radius: 4px;
+}
+
+.reviews-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .reviews-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .reviews-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.review-card {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.review-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.review-verified {
+  font-size: 11px;
+  color: #28a745;
+}
+
+.review-stars {
+  color: #FFD700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.review-text {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.review-info {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.load-more-btn {
+  display: block;
+  width: fit-content;
+  margin: 32px auto 0;
+  padding: 14px 40px;
+  background: var(--white);
+  color: var(--black);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+  border: 2px solid var(--black);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.load-more-btn:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* RELATED PRODUCTS */
+.related-section {
+  padding: 48px 0;
+  border-top: 1px solid #eee;
+}
+
+.related-title {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .related-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-image-wrapper {
+  position: relative;
+  aspect-ratio: 2/3;
+  overflow: hidden;
+  background: var(--bg-light);
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity var(--transition-normal);
+}
+
+.product-image.hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.product-card:hover .product-image.hover { opacity: 1; }
+.product-card:hover .product-image:not(.hover) { opacity: 0; }
+
+.product-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: linear-gradient(135deg, #FF4500 0%, #DC143C 100%);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 12px;
+  letter-spacing: 0.02em;
+  border-radius: 2px;
+}
+
+.product-card-info {
+  padding: 14px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.product-name {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.product-prices {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.product-price { font-size: 15px; font-weight: 700; }
+.product-price-old { font-size: 13px; color: var(--text-secondary); text-decoration: line-through; }
+.product-pix { font-size: 12px; color: var(--text-primary); }
+.product-pix strong { font-weight: 600; }
+
+.btn-buy {
+  width: 100%;
+  padding: 14px;
+  background: var(--black);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+  border: none;
+  margin-top: 12px;
+  transition: all var(--transition-fast);
+}
+
+.btn-buy:hover { background: #333; }
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-normal);
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: var(--white);
+  max-width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  border-radius: 8px;
+  margin: 0 8px;
+}
+
+@media (min-width: 768px) {
+  .modal-content {
+    max-width: 700px;
+    max-height: 90vh;
+    margin: 0;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 36px;
+  height: 36px;
+  background: var(--black);
+  color: var(--white);
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .modal-close {
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+  }
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+}
+
+/* CART NOTIFICATION */
+.cart-notification {
+  position: fixed;
+  top: auto;
+  bottom: 80px;
+  right: 0;
+  left: 0;
+  width: 100%;
+  background: var(--white);
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.15);
+  z-index: 200;
+  transition: transform var(--transition-normal);
+  padding: 16px;
+  transform: translateY(100%);
+}
+
+.cart-notification.show { transform: translateY(0); }
+
+@media (min-width: 768px) {
+  .cart-notification {
+    top: 100px;
+    bottom: auto;
+    right: -400px;
+    left: auto;
+    width: 320px;
+    box-shadow: -4px 0 24px rgba(0,0,0,0.15);
+    transform: none;
+    padding: 20px;
+  }
+
+  .cart-notification.show { right: 0; transform: none; }
+}
+
+.cart-notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-notification-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #28a745;
+}
+
+.cart-notification-close {
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.cart-notification-product {
+  display: flex;
+  gap: 16px;
+}
+
+.cart-notification-img {
+  width: 80px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.cart-notification-details {
+  flex: 1;
+}
+
+.cart-notification-name {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
+  margin-bottom: 8px;
+}
+
+.cart-notification-info {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.cart-notification-price {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+/* MOBILE BUY BUTTON */
+.mobile-buy-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  padding: 12px 16px;
+  padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.1);
+  z-index: 999;
+  display: none;
+  gap: 8px;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .mobile-buy-bar { display: flex !important; }
+}
+
+@media (min-width: 768px) {
+  .mobile-buy-bar { display: none !important; }
+}
+
+.mobile-buy-bar .btn-primary {
+  flex: 1;
+  padding: 16px 12px;
+  font-size: 14px;
+}
+
+.mobile-buy-bar .btn-cart-mobile {
+  padding: 16px 20px;
+  background: var(--white);
+  border: 2px solid var(--black);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.mobile-buy-bar .btn-cart-mobile svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* MOBILE OPTIMIZATIONS */
+@media (max-width: 767px) {
+  .product-title {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+  .product-price-main {
+    font-size: 24px;
+  }
+
+  .product-pix-main {
+    font-size: 14px;
+  }
+
+  .product-rating {
+    flex-wrap: wrap;
+  }
+
+  .selector-label {
+    font-size: 12px;
+  }
+
+  .color-swatch {
+    width: 36px;
+    height: 36px;
+  }
+
+  .size-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 14px;
+  }
+
+  .size-options {
+    gap: 10px;
+  }
+
+  .quantity-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+
+  .quantity-value {
+    width: 56px;
+    height: 44px;
+    font-size: 16px;
+  }
+
+  .benefits-box {
+    flex-direction: column;
+    gap: 12px;
+    font-size: 12px;
+  }
+
+  .description-content {
+    font-size: 13px;
+  }
+
+  .description-content h4 {
+    font-size: 14px;
+  }
+
+  .reviews-title {
+    font-size: 16px;
+  }
+
+  .score-number {
+    font-size: 40px;
+  }
+
+  .reviews-list {
+    grid-template-columns: 1fr;
+  }
+
+  .review-card {
+    padding: 16px;
+  }
+
+  .review-text {
+    font-size: 13px;
+  }
+
+  .related-title {
+    font-size: 16px;
+  }
+
+  .related-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .product-name {
+    font-size: 11px;
+  }
+
+  .product-price {
+    font-size: 14px;
+  }
+
+  .product-pix {
+    font-size: 11px;
+  }
+
+  .btn-buy {
+    padding: 12px;
+    font-size: 11px;
+  }
+
+  .gallery-dots {
+    padding: 12px 0;
+  }
+
+  .gallery-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .breadcrumb {
+    font-size: 11px;
+    padding: 12px 0;
+  }
+
+  .measurements-table {
+    font-size: 11px;
+  }
+
+  .measurements-table th,
+  .measurements-table td {
+    padding: 8px 4px;
+  }
+}
+
+/* FOOTER */
+.footer {
+  background: var(--black);
+  color: var(--white);
+  padding: 48px 0 24px;
+}
+
+.footer-content {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.footer-logo { text-align: center; margin-bottom: 32px; }
+.footer-logo img { height: 48px; margin: 0 auto; filter: invert(1); }
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 24px;
+  margin-bottom: 32px;
+}
+
+.footer-link {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  transition: opacity var(--transition-fast);
+}
+
+.footer-link:hover { opacity: 1; }
+
+.footer-contact { text-align: center; margin-bottom: 32px; }
+.footer-contact p { font-size: 12px; opacity: 0.8; margin-bottom: 4px; }
+
+.footer-payments {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.payment-icon {
+  background: var(--white);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.footer-security {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.security-badge {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.6;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 8px 12px;
+}
+
+.footer-copyright {
+  text-align: center;
+  font-size: 10px;
+  opacity: 0.5;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* FLOATING ELEMENTS */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 90px;
+  right: 16px;
+  width: 52px;
+  height: 52px;
+  background: var(--whatsapp-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  z-index: 80;
+  transition: transform var(--transition-fast);
+}
+
+@media (min-width: 768px) { .whatsapp-btn { bottom: 24px; width: 56px; height: 56px; } }
+.whatsapp-btn:hover { transform: scale(1.05); }
+.whatsapp-btn svg { width: 26px; height: 26px; fill: var(--white); }
+
+@media (min-width: 768px) {
+  .whatsapp-btn svg { width: 28px; height: 28px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Countdown Bar -->
+<div class="countdown-bar full-width">
+  <div class="container">
+    <span class="countdown-text">PRE-BLACK 60%OFF EM TODA CATEGORIA DE JEANS E VESTIDO</span>
+    <div class="countdown-timer">
+      <div class="countdown-unit">
+        <span class="countdown-number" id="countdown-days">16</span>
+        <span class="countdown-label">Dia(s)</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-number" id="countdown-hours">00</span>
+        <span class="countdown-label">Hora(s)</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-number" id="countdown-mins">00</span>
+        <span class="countdown-label">Min(s)</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-number" id="countdown-secs">00</span>
+        <span class="countdown-label">Seg(s)</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Marquee Bar -->
+<div class="marquee-bar full-width">
+  <div class="marquee-content">
+    <span class="marquee-item">5% DE DESCONTO NA PRIMEIRA COMPRA CUPOM: PRIMEIRACOMPRA</span>
+    <span class="marquee-item">FRETE FIXO SUL E SUDESTE R$15,00</span>
+    <span class="marquee-item">BRINDE NAS COMPRAS ACIMA DE R$299,99</span>
+    <span class="marquee-item">5% DE DESCONTO NA PRIMEIRA COMPRA CUPOM: PRIMEIRACOMPRA</span>
+    <span class="marquee-item">FRETE FIXO SUL E SUDESTE R$15,00</span>
+    <span class="marquee-item">BRINDE NAS COMPRAS ACIMA DE R$299,99</span>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header full-width">
+  <div class="header-main">
+    <button class="header-icon" aria-label="Buscar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+    </button>
+
+    <a href="index.html" class="header-logo">
+      <img src="logo-maxfashion.png" alt="Max Fashion">
+    </a>
+
+    <div class="header-right">
+      <a href="https://modamax.com.br/conta/" class="header-icon" aria-label="Minha Conta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="8" r="4"/><path d="M4 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2"/>
+        </svg>
+      </a>
+      <a href="https://modamax.com.br/carrinho/" class="header-icon cart-icon" aria-label="Carrinho">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M6 6 5 3H2"/>
+        </svg>
+        <span class="cart-count" id="cart-count">0</span>
+      </a>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="https://modamax.com.br/lancamentos/" class="nav-link">Lançamentos</a></li>
+      <li class="nav-item"><a href="https://modamax.com.br/colecao-verao/" class="nav-link">Coleção de Verão</a></li>
+      <li class="nav-item"><a href="https://modamax.com.br/mais-vendidos/" class="nav-link">Mais Vendidos</a></li>
+      <li class="nav-item"><a href="https://modamax.com.br/jeans-favoritos/" class="nav-link">Jeans Favoritos</a></li>
+      <li class="nav-item"><a href="https://modamax.com.br/colecao-outono-inverno/" class="nav-link">Coleção Outono Inverno</a></li>
+      <li class="nav-item"><a href="https://modamax.com.br/alfaiataria-casual/" class="nav-link">Alfaiataria Casual</a></li>
+      <li class="nav-item"><a href="https://modamax.com.br/roupas/" class="nav-link">Roupas</a></li>
+      <li class="nav-item"><a href="https://modamax.com.br/basicos-essenciais/" class="nav-link">Básicos Essenciais</a></li>
+      <li class="nav-item"><a href="https://modamax.com.br/outlet/" class="nav-link">Outlet</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb container">
+  <a href="index.html">Início</a>
+  <span>›</span>
+  <a href="https://modamax.com.br/roupas/blusas/">Blusas</a>
+  <span>›</span>
+  Blusa Algodão Menegotti
+</div>
+
+<!-- Product Page -->
+<section class="product-page">
+  <div class="container">
+    <div class="product-layout">
+      <!-- Gallery -->
+      <div class="gallery">
+        <!-- Desktop Main Image -->
+        <div class="gallery-main">
+          <img id="main-image" src="img/blusa-menegotti-off-white.webp" alt="Blusa Algodão Menegotti Off-White">
+        </div>
+
+        <!-- Desktop Thumbnails -->
+        <div class="gallery-thumbs">
+          <div class="gallery-thumb active" data-img="img/blusa-menegotti-off-white.webp">
+            <img src="img/blusa-menegotti-off-white.webp" alt="Off-White">
+          </div>
+          <div class="gallery-thumb" data-img="img/blusa-menegotti-preta.webp">
+            <img src="img/blusa-menegotti-preta.webp" alt="Preta">
+          </div>
+          <div class="gallery-thumb" data-img="img/blusa-menegotti-caramelo.webp">
+            <img src="img/blusa-menegotti-caramelo.webp" alt="Caramelo">
+          </div>
+          <div class="gallery-thumb" data-img="img/blusa-menegotti-vermelha.webp">
+            <img src="img/blusa-menegotti-vermelha.webp" alt="Vermelha">
+          </div>
+          <div class="gallery-thumb" data-img="img/blusa-menegotti-verde.webp">
+            <img src="img/blusa-menegotti-verde.webp" alt="Verde">
+          </div>
+          <div class="gallery-thumb" data-img="img/blusa-menegotti-cinza-mescla.webp">
+            <img src="img/blusa-menegotti-cinza-mescla.webp" alt="Cinza Mescla">
+          </div>
+          <div class="gallery-thumb" data-img="img/blusa-menegotti-bege.webp">
+            <img src="img/blusa-menegotti-bege.webp" alt="Bege">
+          </div>
+          <div class="gallery-thumb" data-img="img/blusa-menegotti-todas-as-cores.webp">
+            <img src="img/blusa-menegotti-todas-as-cores.webp" alt="Todas as cores">
+          </div>
+        </div>
+
+        <!-- Mobile Carousel -->
+        <div class="gallery-carousel" id="gallery-carousel">
+          <div class="gallery-slide"><img src="img/blusa-menegotti-off-white.webp" alt="Off-White"></div>
+          <div class="gallery-slide"><img src="img/blusa-menegotti-preta.webp" alt="Preta"></div>
+          <div class="gallery-slide"><img src="img/blusa-menegotti-caramelo.webp" alt="Caramelo"></div>
+          <div class="gallery-slide"><img src="img/blusa-menegotti-vermelha.webp" alt="Vermelha"></div>
+          <div class="gallery-slide"><img src="img/blusa-menegotti-verde.webp" alt="Verde"></div>
+          <div class="gallery-slide"><img src="img/blusa-menegotti-cinza-mescla.webp" alt="Cinza Mescla"></div>
+          <div class="gallery-slide"><img src="img/blusa-menegotti-bege.webp" alt="Bege"></div>
+          <div class="gallery-slide"><img src="img/blusa-menegotti-todas-as-cores.webp" alt="Todas as cores"></div>
+        </div>
+        <div class="gallery-dots">
+          <button class="gallery-dot active" data-index="0"></button>
+          <button class="gallery-dot" data-index="1"></button>
+          <button class="gallery-dot" data-index="2"></button>
+          <button class="gallery-dot" data-index="3"></button>
+          <button class="gallery-dot" data-index="4"></button>
+          <button class="gallery-dot" data-index="5"></button>
+          <button class="gallery-dot" data-index="6"></button>
+          <button class="gallery-dot" data-index="7"></button>
+        </div>
+      </div>
+
+      <!-- Product Info -->
+      <div class="product-info-section">
+        <h1 class="product-title">BLUSA ALGODÃO MENEGOTTI MANGA EM RENDA</h1>
+
+        <div class="product-rating">
+          <span class="product-stars">★★★★★</span>
+          <span class="product-rating-number">4.9</span>
+          <span class="product-rating-count">(127 avaliações)</span>
+        </div>
+
+        <div>
+          <p class="product-price-main">R$37,00</p>
+          <p class="product-pix-main"><strong>R$35,15</strong> com Pix (5% OFF)</p>
+        </div>
+
+        <!-- Color Selector -->
+        <div class="selector-group">
+          <p class="selector-label">Cor: <span id="selected-color">Off-White</span></p>
+          <div class="color-options">
+            <button class="color-swatch active" style="background-color: #F3EFE4;" title="Off-White" data-color="Off-White" data-img="img/blusa-menegotti-off-white.webp"></button>
+            <button class="color-swatch" style="background-color: #111111;" title="Preta" data-color="Preta" data-img="img/blusa-menegotti-preta.webp"></button>
+            <button class="color-swatch" style="background-color: #9A4E25;" title="Caramelo" data-color="Caramelo" data-img="img/blusa-menegotti-caramelo.webp"></button>
+            <button class="color-swatch" style="background-color: #B3161E;" title="Vermelha" data-color="Vermelha" data-img="img/blusa-menegotti-vermelha.webp"></button>
+            <button class="color-swatch" style="background-color: #1F5A36;" title="Verde" data-color="Verde" data-img="img/blusa-menegotti-verde.webp"></button>
+            <button class="color-swatch" style="background-color: #B9B9B9;" title="Cinza Mescla" data-color="Cinza Mescla" data-img="img/blusa-menegotti-cinza-mescla.webp"></button>
+            <button class="color-swatch" style="background-color: #D9C4A0;" title="Bege" data-color="Bege" data-img="img/blusa-menegotti-bege.webp"></button>
+          </div>
+        </div>
+
+        <!-- Size Selector -->
+        <div class="selector-group">
+          <p class="selector-label">
+            Tamanho
+            <span class="size-table-link" id="open-size-table">Tabela de medidas</span>
+          </p>
+          <div class="size-options">
+            <button class="size-btn" data-size="P">P</button>
+            <button class="size-btn" data-size="M">M</button>
+            <button class="size-btn" data-size="G">G</button>
+            <button class="size-btn" data-size="GG">GG</button>
+            <button class="size-btn" data-size="G1">G1</button>
+            <button class="size-btn" data-size="G2">G2</button>
+            <button class="size-btn" data-size="G3">G3</button>
+            <button class="size-btn" data-size="G4">G4</button>
+          </div>
+          <p class="size-error" id="size-error">Selecione um tamanho</p>
+        </div>
+
+        <!-- Quantity -->
+        <div class="selector-group">
+          <p class="selector-label">Quantidade</p>
+          <div class="quantity-selector">
+            <div class="quantity-controls">
+              <button class="quantity-btn" id="qty-minus">−</button>
+              <input type="text" class="quantity-value" id="qty-value" value="1" readonly>
+              <button class="quantity-btn" id="qty-plus">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Buttons (Desktop) -->
+        <div class="buttons-desktop">
+          <button class="btn-primary" id="btn-buy">COMPRAR</button>
+          <button class="btn-secondary" id="btn-add-cart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M6 6 5 3H2"/>
+            </svg>
+            ADICIONAR AO CARRINHO
+          </button>
+        </div>
+
+        <!-- Benefits Box -->
+        <div class="benefits-box">
+          <div class="benefit-item-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="1" y="6" width="22" height="12" rx="2"/><path d="M17 10h2M5 10h2"/>
+            </svg>
+            <span>Frete grátis acima de R$200</span>
+          </div>
+          <div class="benefit-item-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+            <span>5% OFF no Pix</span>
+          </div>
+          <div class="benefit-item-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M20 12v6a2 2 0 01-2 2H6a2 2 0 01-2-2v-6"/><rect x="6" y="5" width="12" height="7"/><path d="M12 12v-2M8 8h8"/>
+            </svg>
+            <span>Brinde nas compras acima de R$299,99</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Description Section -->
+<section class="description-section">
+  <div class="container">
+    <h2 class="description-title">Descrição</h2>
+    <div class="description-content">
+      <p>✨ <strong>Beleza, estilo e confiança em cada detalhe!</strong></p>
+
+      <p>Descubra peças que valorizam sua beleza, realçam sua personalidade e deixam você ainda mais elegante. Porque você merece se sentir linda todos os dias!</p>
+
+      <p>A Blusa Algodão Menegotti tem o conforto da malha de algodão com o charme das mangas curtas em renda bordada com acabamento recortado. Gola redonda, caimento leve e modelagem que veste bem do P ao G4. Fica linda com jeans, saia ou alfaiataria, do dia a dia ao passeio de fim de semana.</p>
+
+      <h4>Detalhes da peça</h4>
+      <ul>
+        <li>Tecido: malha de algodão Menegotti</li>
+        <li>Mangas curtas em renda bordada</li>
+        <li>Gola redonda</li>
+        <li>Cores: Off-White, Preta, Caramelo, Vermelha, Verde, Cinza Mescla e Bege</li>
+        <li>Tamanhos: P, M, G, GG, G1, G2, G3 e G4</li>
+      </ul>
+
+      <h4>Tabela de medidas</h4>
+      <div class="table-image">
+        <img src="img/tabela-de-medidas.webp" alt="Tabela de medidas">
+      </div>
+
+      <table class="measurements-table">
+        <thead>
+          <tr>
+            <th>Tamanho</th>
+            <th>Busto (cm)</th>
+            <th>Cintura (cm)</th>
+            <th>Quadril (cm)</th>
+            <th>Manequim</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>P</td>
+            <td>84 – 88</td>
+            <td>66 – 70</td>
+            <td>90 – 94</td>
+            <td>36 / 38</td>
+          </tr>
+          <tr>
+            <td>M</td>
+            <td>89 – 93</td>
+            <td>71 – 75</td>
+            <td>95 – 99</td>
+            <td>40</td>
+          </tr>
+          <tr>
+            <td>G</td>
+            <td>94 – 98</td>
+            <td>76 – 80</td>
+            <td>100 – 104</td>
+            <td>42</td>
+          </tr>
+          <tr>
+            <td>GG</td>
+            <td>99 – 103</td>
+            <td>81 – 85</td>
+            <td>105 – 109</td>
+            <td>44</td>
+          </tr>
+          <tr>
+            <td>G1</td>
+            <td>104 – 108</td>
+            <td>86 – 90</td>
+            <td>110 – 114</td>
+            <td>46</td>
+          </tr>
+          <tr>
+            <td>G2</td>
+            <td>109 – 113</td>
+            <td>91 – 95</td>
+            <td>115 – 119</td>
+            <td>48 / 50</td>
+          </tr>
+          <tr>
+            <td>G3</td>
+            <td>114 – 118</td>
+            <td>96 – 100</td>
+            <td>120 – 124</td>
+            <td>52 / 54</td>
+          </tr>
+          <tr>
+            <td>G4</td>
+            <td>119 – 123</td>
+            <td>101 – 105</td>
+            <td>125 – 129</td>
+            <td>56 / 58</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Cuidados:</strong> lavar à mão ou na máquina no ciclo delicado, do avesso, com água fria. Não usar alvejante. Secar à sombra.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews Section -->
+<section class="reviews-section">
+  <div class="container">
+    <div class="reviews-header">
+      <h2 class="reviews-title">Avaliações dos Clientes</h2>
+      <div class="reviews-summary">
+        <div class="reviews-score">
+          <span class="score-number">4.9</span>
+          <div class="score-stars">★★★★★</div>
+          <span class="score-total">127 avaliações</span>
+        </div>
+        <div class="reviews-bars">
+          <div class="bar-row"><span>5 ★</span><div class="bar"><div class="bar-fill" style="width:89%"></div></div><span>113</span></div>
+          <div class="bar-row"><span>4 ★</span><div class="bar"><div class="bar-fill" style="width:8%"></div></div><span>10</span></div>
+          <div class="bar-row"><span>3 ★</span><div class="bar"><div class="bar-fill" style="width:2%"></div></div><span>3</span></div>
+          <div class="bar-row"><span>2 ★</span><div class="bar"><div class="bar-fill" style="width:1%"></div></div><span>1</span></div>
+          <div class="bar-row"><span>1 ★</span><div class="bar"><div class="bar-fill" style="width:0%"></div></div><span>0</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews-list">
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Maria Clara S.</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Amei demais! A blusa é linda, o tecido é muito macio e a renda da manga é delicada. Comprei a cor off-white e ficou perfeita. Super recomendo!</p>
+        <div class="review-info"><span>Cor: Off-White</span> · <span>Tamanho: M</span> · <span>08/11/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Ana Paula R.</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Que blusa maravilhosa! Chegou super rápido e bem embalada. A qualidade é excelente, já quero comprar em outras cores.</p>
+        <div class="review-info"><span>Cor: Preta</span> · <span>Tamanho: G</span> · <span>07/11/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Juliana M.</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Perfeita! Veste super bem, não marca nada. A manga de renda é um charme. Usei no trabalho e recebi muitos elogios.</p>
+        <div class="review-info"><span>Cor: Verde</span> · <span>Tamanho: GG</span> · <span>06/11/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Fernanda Costa</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Simplesmente apaixonada! O caimento é lindo e o tecido não esquenta. Perfeita pro verão. Já é minha favorita!</p>
+        <div class="review-info"><span>Cor: Caramelo</span> · <span>Tamanho: P</span> · <span>05/11/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Camila Oliveira</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Adorei! Comprei G2 e ficou perfeita. Finalmente uma loja que tem tamanhos maiores com qualidade. A renda é linda!</p>
+        <div class="review-info"><span>Cor: Vermelha</span> · <span>Tamanho: G2</span> · <span>04/11/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Patrícia L.</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Blusa linda e confortável. O algodão é de ótima qualidade. Lavei e não deformou nada. Recomendo muito!</p>
+        <div class="review-info"><span>Cor: Cinza Mescla</span> · <span>Tamanho: M</span> · <span>03/11/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Beatriz Santos</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Maravilhosa! A cor bege é linda, combina com tudo. O acabamento da renda é impecável. Entrega foi rápida!</p>
+        <div class="review-info"><span>Cor: Bege</span> · <span>Tamanho: G</span> · <span>02/11/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Renata Almeida</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Que amor de blusa! Comprei pra usar no aniversário da minha mãe e amei. Vou comprar mais cores com certeza.</p>
+        <div class="review-info"><span>Cor: Off-White</span> · <span>Tamanho: P</span> · <span>01/11/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Larissa F.</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★☆</div>
+        <p class="review-text">Gostei muito da blusa, só achei que poderia ser um pouquinho mais comprida. Mas a qualidade é ótima e a renda é linda.</p>
+        <div class="review-info"><span>Cor: Preta</span> · <span>Tamanho: GG</span> · <span>31/10/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Mariana Ribeiro</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Perfeita em todos os sentidos! Tecido macio, manga linda, caimento impecável. Nota 10!</p>
+        <div class="review-info"><span>Cor: Verde</span> · <span>Tamanho: M</span> · <span>30/10/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Isabela Martins</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Amoooo! Já é a terceira que compro. Tenho em 3 cores diferentes. Uso pra trabalhar e pra sair. Versátil demais!</p>
+        <div class="review-info"><span>Cor: Caramelo</span> · <span>Tamanho: G</span> · <span>29/10/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Débora Souza</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Chegou antes do prazo! A blusa é linda, a cor vermelha é vibrante e a renda dá um toque especial. Amei!</p>
+        <div class="review-info"><span>Cor: Vermelha</span> · <span>Tamanho: P</span> · <span>28/10/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Priscila Gomes</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Excelente qualidade! O algodão é fresquinho e a modelagem valoriza o corpo. Super satisfeita com a compra.</p>
+        <div class="review-info"><span>Cor: Cinza Mescla</span> · <span>Tamanho: G1</span> · <span>27/10/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Tatiane Ferreira</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Que blusa mais linda! A renda é delicada e o tecido não amassa. Perfeita pra quem não gosta de passar roupa rs</p>
+        <div class="review-info"><span>Cor: Bege</span> · <span>Tamanho: M</span> · <span>26/10/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Carla Mendes</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Simplesmente perfeita! Comprei pro meu casamento civil e ficou elegante. Todos perguntaram onde comprei.</p>
+        <div class="review-info"><span>Cor: Off-White</span> · <span>Tamanho: G</span> · <span>25/10/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Luciana P.</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Ótima compra! A blusa é linda e o preço é justo pela qualidade. A manga de renda é o diferencial.</p>
+        <div class="review-info"><span>Cor: Preta</span> · <span>Tamanho: GG</span> · <span>24/10/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Amanda Lima</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Apaixonada! Já lavei várias vezes e continua linda. A cor verde é maravilhosa, diferente de tudo que tenho.</p>
+        <div class="review-info"><span>Cor: Verde</span> · <span>Tamanho: P</span> · <span>23/10/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Vanessa Torres</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★☆</div>
+        <p class="review-text">Blusa bonita e bem feita. Só demorou um pouco pra chegar (8 dias), mas valeu a pena esperar.</p>
+        <div class="review-info"><span>Cor: Caramelo</span> · <span>Tamanho: M</span> · <span>22/10/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Gabriela Nunes</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Maravilhosa! Sou G3 e sempre tenho dificuldade de achar roupas bonitas. Essa blusa veste perfeitamente!</p>
+        <div class="review-info"><span>Cor: Vermelha</span> · <span>Tamanho: G3</span> · <span>21/10/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Aline Cardoso</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">A melhor blusa que já comprei online! Qualidade premium, acabamento perfeito. Virei cliente fiel!</p>
+        <div class="review-info"><span>Cor: Off-White</span> · <span>Tamanho: G</span> · <span>20/10/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Cristina Dias</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Linda demais! O cinza mescla é discreto e elegante. Perfeita pro escritório. Já recebi vários elogios.</p>
+        <div class="review-info"><span>Cor: Cinza Mescla</span> · <span>Tamanho: P</span> · <span>19/10/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Michele Rocha</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Adorei! O tecido é fresquinho, ideal pro calor. A renda não coça e é bem delicada. Recomendo!</p>
+        <div class="review-info"><span>Cor: Bege</span> · <span>Tamanho: GG</span> · <span>18/10/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Sandra Pereira</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Comprei pra minha filha e ela amou! A cor preta é curinga, combina com tudo. Voltarei a comprar.</p>
+        <div class="review-info"><span>Cor: Preta</span> · <span>Tamanho: M</span> · <span>17/10/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Raquel Azevedo</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Blusa incrível! Super confortável e elegante ao mesmo tempo. O verde é lindo, cor única!</p>
+        <div class="review-info"><span>Cor: Verde</span> · <span>Tamanho: G1</span> · <span>16/10/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Daniela Castro</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Perfeição! Chegou rápido, bem embalada e a blusa é exatamente como nas fotos. Nota 1000!</p>
+        <div class="review-info"><span>Cor: Caramelo</span> · <span>Tamanho: G</span> · <span>15/10/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Simone Barbosa</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Que achado! Blusa linda, preço ótimo e qualidade excelente. A manga de renda é um diferencial lindo.</p>
+        <div class="review-info"><span>Cor: Vermelha</span> · <span>Tamanho: P</span> · <span>14/10/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Elaine Moreira</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★☆</div>
+        <p class="review-text">Gostei bastante! A blusa é linda e confortável. Tirei uma estrela porque achei a gola um pouco apertada.</p>
+        <div class="review-info"><span>Cor: Off-White</span> · <span>Tamanho: GG</span> · <span>13/10/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Viviane Cunha</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Amei! Primeira compra na loja e já virei fã. Atendimento excelente e produto de qualidade.</p>
+        <div class="review-info"><span>Cor: Cinza Mescla</span> · <span>Tamanho: M</span> · <span>12/10/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Jéssica Ramos</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Linda! Comprei a bege e já quero a off-white também. A modelagem é perfeita, não marca barriga.</p>
+        <div class="review-info"><span>Cor: Bege</span> · <span>Tamanho: G2</span> · <span>11/10/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Paula Vieira</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Sensacional! A renda bordada é de alta qualidade. Lavei na máquina no modo delicado e ficou intacta.</p>
+        <div class="review-info"><span>Cor: Preta</span> · <span>Tamanho: G</span> · <span>10/10/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Mônica Freitas</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Maravilhosa! Estou encantada com a qualidade. O G4 vestiu perfeitamente em mim. Obrigada Max Fashion!</p>
+        <div class="review-info"><span>Cor: Verde</span> · <span>Tamanho: G4</span> · <span>09/10/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Regina Teixeira</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Produto de excelente qualidade! A cor caramelo é ainda mais bonita pessoalmente. Super recomendo!</p>
+        <div class="review-info"><span>Cor: Caramelo</span> · <span>Tamanho: GG</span> · <span>08/10/2026</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Adriana Campos</span>
+          <span class="review-verified">✓ Compra verificada</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Perfeita! Uso M normalmente e ficou ótima. A manga de renda é o charme da peça. Amei!</p>
+        <div class="review-info"><span>Cor: Off-White</span> · <span>Tamanho: M</span> · <span>07/10/2026</span></div>
+      </div>
+    </div>
+
+    <button class="load-more-btn" id="load-more">Ver mais avaliações</button>
+  </div>
+</section>
+
+<!-- Related Products -->
+<section class="related-section">
+  <div class="container">
+    <h2 class="related-title">Você também pode gostar</h2>
+    <div class="related-grid">
+      <!-- BLUSA BIANCA -->
+      <article class="product-card">
+        <a href="https://modamax.com.br/produtos/blusa-bianca-1phf6/" target="_blank">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_3983-42cfe3a32980e6923817870758805118-1024-1024.webp" alt="BLUSA BIANCA" loading="lazy">
+          </div>
+          <div class="product-card-info">
+            <h3 class="product-name">BLUSA BIANCA</h3>
+            <div class="product-prices">
+              <span class="product-price">R$79,99</span>
+            </div>
+            <p class="product-pix"><strong>R$75,99</strong> com Pix</p>
+          </div>
+        </a>
+        <button class="btn-buy">Comprar</button>
+      </article>
+
+      <!-- VESTIDO SERENA -->
+      <article class="product-card">
+        <a href="https://modamax.com.br/produtos/vestido-serena-y5dzt/" target="_blank">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_6139-33f2ce1b5f0accac7117891579958969-1024-1024.webp" alt="VESTIDO SERENA" loading="lazy">
+            <span class="product-badge">15% OFF</span>
+          </div>
+          <div class="product-card-info">
+            <h3 class="product-name">VESTIDO SERENA</h3>
+            <div class="product-prices">
+              <span class="product-price">R$144,49</span>
+              <span class="product-price-old">R$169,99</span>
+            </div>
+            <p class="product-pix"><strong>R$137,27</strong> com Pix</p>
+          </div>
+        </a>
+        <button class="btn-buy">Comprar</button>
+      </article>
+
+      <!-- VESTIDO CHRIS -->
+      <article class="product-card">
+        <a href="https://modamax.com.br/produtos/vestido-chris/" target="_blank">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_2343-837c122005fcc22c0317849366800526-1024-1024.webp" alt="VESTIDO CHRIS" loading="lazy">
+            <span class="product-badge">15% OFF</span>
+          </div>
+          <div class="product-card-info">
+            <h3 class="product-name">VESTIDO CHRIS</h3>
+            <div class="product-prices">
+              <span class="product-price">R$101,99</span>
+              <span class="product-price-old">R$119,99</span>
+            </div>
+            <p class="product-pix"><strong>R$96,89</strong> com Pix</p>
+          </div>
+        </a>
+        <button class="btn-buy">Comprar</button>
+      </article>
+
+      <!-- VESTIDO MANOELA -->
+      <article class="product-card">
+        <a href="https://modamax.com.br/produtos/vestido-manoela-dud00/" target="_blank">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://acdn-us.mitiendanube.com/stores/007/190/373/products/img_3027-87fde5ce62d1472e7517861148604920-1024-1024.webp" alt="VESTIDO MANOELA" loading="lazy">
+            <span class="product-badge">15% OFF</span>
+          </div>
+          <div class="product-card-info">
+            <h3 class="product-name">VESTIDO MANOELA</h3>
+            <div class="product-prices">
+              <span class="product-price">R$135,99</span>
+              <span class="product-price-old">R$159,99</span>
+            </div>
+            <p class="product-pix"><strong>R$129,19</strong> com Pix</p>
+          </div>
+        </a>
+        <button class="btn-buy">Comprar</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer full-width">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="logo-maxfashion.png" alt="Max Fashion">
+    </div>
+
+    <div class="footer-links">
+      <a href="https://modamax.com.br/quem-somos/" class="footer-link">Quem Somos</a>
+      <a href="https://modamax.com.br/rastreio/" class="footer-link">Rastreio</a>
+      <a href="https://modamax.com.br/brinde/" class="footer-link">Brinde</a>
+      <a href="https://modamax.com.br/trocas-e-devolucoes/" class="footer-link">Trocas e devoluções</a>
+      <a href="https://modamax.com.br/politica-de-privacidade/" class="footer-link">Privacidade</a>
+      <a href="https://modamax.com.br/seguranca/" class="footer-link">Segurança</a>
+      <a href="https://modamax.com.br/prazo-de-postagem/" class="footer-link">Prazo de postagem</a>
+      <a href="https://modamax.com.br/pagamento/" class="footer-link">Pagamento</a>
+    </div>
+
+    <div class="footer-contact">
+      <p>12988487255 · modamax@sac.com.br</p>
+      <p>Rua Andorra 500, Loja 241 - Shopping Oriente - São José dos Campos</p>
+    </div>
+
+    <div class="footer-payments">
+      <span class="payment-icon">Visa</span>
+      <span class="payment-icon">Mastercard</span>
+      <span class="payment-icon">Amex</span>
+      <span class="payment-icon">Elo</span>
+      <span class="payment-icon">Hipercard</span>
+      <span class="payment-icon">Diners</span>
+      <span class="payment-icon">Boleto</span>
+      <span class="payment-icon">Pix</span>
+    </div>
+
+    <div class="footer-security">
+      <span class="security-badge">Site Seguro SSL</span>
+      <span class="security-badge">Google Safe Browsing</span>
+      <span class="security-badge">Verificada por Reclame AQUI</span>
+    </div>
+
+    <div class="footer-copyright">
+      Copyright Max Fashion - 16994984000103 - 2026. Todos os direitos reservados.
+    </div>
+  </div>
+</footer>
+
+<!-- Size Table Modal -->
+<div class="modal" id="size-modal">
+  <div class="modal-content">
+    <button class="modal-close" id="close-modal">×</button>
+    <img src="img/tabela-de-medidas.webp" alt="Tabela de medidas">
+  </div>
+</div>
+
+<!-- Cart Notification -->
+<div class="cart-notification" id="cart-notification">
+  <div class="cart-notification-header">
+    <span class="cart-notification-title">✓ Produto adicionado à sacola</span>
+    <span class="cart-notification-close" id="close-notification">×</span>
+  </div>
+  <div class="cart-notification-product">
+    <img class="cart-notification-img" id="notification-img" src="img/blusa-menegotti-off-white.webp" alt="">
+    <div class="cart-notification-details">
+      <p class="cart-notification-name">BLUSA ALGODÃO MENEGOTTI MANGA EM RENDA</p>
+      <p class="cart-notification-info">Cor: <span id="notification-color">Off-White</span></p>
+      <p class="cart-notification-info">Tamanho: <span id="notification-size">-</span></p>
+      <p class="cart-notification-price">R$37,00</p>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile Buy Bar -->
+<div class="mobile-buy-bar">
+  <button class="btn-cart-mobile" id="btn-cart-mobile" aria-label="Adicionar ao carrinho">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M6 6 5 3H2"/>
+    </svg>
+  </button>
+  <button class="btn-primary" id="btn-buy-mobile">COMPRAR AGORA</button>
+</div>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/5512988487255" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<script>
+// Product Data
+var product = {
+  id: "blusa-menegotti",
+  nome: "BLUSA ALGODÃO MENEGOTTI MANGA EM RENDA",
+  preco: 37.00,
+  pix: 35.15,
+  cores: [
+    { nome: "Off-White", hex: "#F3EFE4", foto: "img/blusa-menegotti-off-white.webp" },
+    { nome: "Preta", hex: "#111111", foto: "img/blusa-menegotti-preta.webp" },
+    { nome: "Caramelo", hex: "#9A4E25", foto: "img/blusa-menegotti-caramelo.webp" },
+    { nome: "Vermelha", hex: "#B3161E", foto: "img/blusa-menegotti-vermelha.webp" },
+    { nome: "Verde", hex: "#1F5A36", foto: "img/blusa-menegotti-verde.webp" },
+    { nome: "Cinza Mescla", hex: "#B9B9B9", foto: "img/blusa-menegotti-cinza-mescla.webp" },
+    { nome: "Bege", hex: "#D9C4A0", foto: "img/blusa-menegotti-bege.webp" }
+  ],
+  tamanhos: ["P", "M", "G", "GG", "G1", "G2", "G3", "G4"]
+};
+
+var selectedColor = "Off-White";
+var selectedSize = null;
+var quantity = 1;
+var cartCount = 0;
+
+// COUNTDOWN TIMER
+function updateCountdown() {
+  var target = new Date('2026-11-27T00:00:00').getTime();
+  var now = new Date().getTime();
+  var diff = target - now;
+
+  if (diff <= 0) return;
+
+  var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  var secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+  document.getElementById('countdown-days').textContent = String(days).padStart(2, '0');
+  document.getElementById('countdown-hours').textContent = String(hours).padStart(2, '0');
+  document.getElementById('countdown-mins').textContent = String(mins).padStart(2, '0');
+  document.getElementById('countdown-secs').textContent = String(secs).padStart(2, '0');
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// COLOR SELECTOR
+document.querySelectorAll('.color-swatch').forEach(function(swatch) {
+  swatch.addEventListener('click', function() {
+    document.querySelectorAll('.color-swatch').forEach(function(s) { s.classList.remove('active'); });
+    this.classList.add('active');
+    selectedColor = this.getAttribute('data-color');
+    document.getElementById('selected-color').textContent = selectedColor;
+
+    var imgSrc = this.getAttribute('data-img');
+    document.getElementById('main-image').src = imgSrc;
+
+    // Update thumbnails active state
+    document.querySelectorAll('.gallery-thumb').forEach(function(thumb) {
+      thumb.classList.remove('active');
+      if (thumb.getAttribute('data-img') === imgSrc) {
+        thumb.classList.add('active');
+      }
+    });
+  });
+});
+
+// SIZE SELECTOR
+document.querySelectorAll('.size-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.size-btn').forEach(function(b) { b.classList.remove('active'); });
+    this.classList.add('active');
+    selectedSize = this.getAttribute('data-size');
+    document.getElementById('size-error').classList.remove('show');
+  });
+});
+
+// QUANTITY
+document.getElementById('qty-minus').addEventListener('click', function() {
+  if (quantity > 1) {
+    quantity--;
+    document.getElementById('qty-value').value = quantity;
+  }
+});
+
+document.getElementById('qty-plus').addEventListener('click', function() {
+  quantity++;
+  document.getElementById('qty-value').value = quantity;
+});
+
+// GALLERY THUMBNAILS
+document.querySelectorAll('.gallery-thumb').forEach(function(thumb) {
+  thumb.addEventListener('click', function() {
+    document.querySelectorAll('.gallery-thumb').forEach(function(t) { t.classList.remove('active'); });
+    this.classList.add('active');
+    document.getElementById('main-image').src = this.getAttribute('data-img');
+  });
+});
+
+// MOBILE CAROUSEL
+var carousel = document.getElementById('gallery-carousel');
+var dots = document.querySelectorAll('.gallery-dot');
+
+carousel.addEventListener('scroll', function() {
+  var scrollLeft = carousel.scrollLeft;
+  var slideWidth = carousel.offsetWidth;
+  var currentSlide = Math.round(scrollLeft / slideWidth);
+
+  dots.forEach(function(dot, index) {
+    dot.classList.toggle('active', index === currentSlide);
+  });
+});
+
+dots.forEach(function(dot) {
+  dot.addEventListener('click', function() {
+    var index = parseInt(this.getAttribute('data-index'));
+    carousel.scrollTo({ left: index * carousel.offsetWidth, behavior: 'smooth' });
+  });
+});
+
+// SIZE TABLE MODAL
+document.getElementById('open-size-table').addEventListener('click', function() {
+  document.getElementById('size-modal').classList.add('active');
+});
+
+document.getElementById('close-modal').addEventListener('click', function() {
+  document.getElementById('size-modal').classList.remove('active');
+});
+
+document.getElementById('size-modal').addEventListener('click', function(e) {
+  if (e.target === this) {
+    this.classList.remove('active');
+  }
+});
+
+// BUY BUTTON
+function handleBuy() {
+  if (!selectedSize) {
+    document.getElementById('size-error').classList.add('show');
+    return;
+  }
+
+  cartCount += quantity;
+  document.getElementById('cart-count').textContent = cartCount;
+
+  // Update notification
+  var colorData = product.cores.find(function(c) { return c.nome === selectedColor; });
+  document.getElementById('notification-img').src = colorData.foto;
+  document.getElementById('notification-color').textContent = selectedColor;
+  document.getElementById('notification-size').textContent = selectedSize;
+
+  // Show notification
+  document.getElementById('cart-notification').classList.add('show');
+
+  setTimeout(function() {
+    document.getElementById('cart-notification').classList.remove('show');
+  }, 4000);
+}
+
+document.getElementById('btn-buy').addEventListener('click', handleBuy);
+document.getElementById('btn-buy-mobile').addEventListener('click', handleBuy);
+document.getElementById('btn-cart-mobile').addEventListener('click', handleBuy);
+
+// CLOSE NOTIFICATION
+document.getElementById('close-notification').addEventListener('click', function() {
+  document.getElementById('cart-notification').classList.remove('show');
+});
+
+// ADD TO CART BUTTON (secondary)
+document.getElementById('btn-add-cart').addEventListener('click', handleBuy);
+</script>
+</body>
+</html>
